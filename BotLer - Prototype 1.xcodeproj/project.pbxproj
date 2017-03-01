@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7CE460A71E670E130090EA46 /* FeedbackSubject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE460A61E670E130090EA46 /* FeedbackSubject.swift */; };
 		D82D32281E59F90300542F89 /* ChooseSubject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82D32271E59F90300542F89 /* ChooseSubject.swift */; };
 		D82D322B1E59FC6B00542F89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D82D32291E59FC6B00542F89 /* Main.storyboard */; };
 		D830B1591E5DD2B9004D397A /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D830B1581E5DD2B9004D397A /* MyTableViewCell.swift */; };
@@ -46,6 +47,7 @@
 		0C22CE5B46FA1562E1EA089B /* Pods-BotLer - Prototype 1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BotLer - Prototype 1.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BotLer - Prototype 1/Pods-BotLer - Prototype 1.debug.xcconfig"; sourceTree = "<group>"; };
 		10D6FB2ED99D09B1581B3B56 /* Pods_BotLer___Prototype_1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_BotLer___Prototype_1.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A2B9EA08E8FFEC4DED7017D /* Pods-BotLer - Prototype 1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BotLer - Prototype 1.release.xcconfig"; path = "Pods/Target Support Files/Pods-BotLer - Prototype 1/Pods-BotLer - Prototype 1.release.xcconfig"; sourceTree = "<group>"; };
+		7CE460A61E670E130090EA46 /* FeedbackSubject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackSubject.swift; sourceTree = "<group>"; };
 		D82D32271E59F90300542F89 /* ChooseSubject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseSubject.swift; sourceTree = "<group>"; };
 		D82D322A1E59FC6B00542F89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D830B1581E5DD2B9004D397A /* MyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 				D8A545AB1E47A3FA004D1239 /* Info.plist */,
 				D875317D1E48A97F00580FE2 /* FeedbackClass.swift */,
 				D830B1581E5DD2B9004D397A /* MyTableViewCell.swift */,
+				7CE460A61E670E130090EA46 /* FeedbackSubject.swift */,
 			);
 			path = "BotLer - Prototype 1";
 			sourceTree = "<group>";
@@ -369,6 +372,7 @@
 				D875317E1E48A97F00580FE2 /* FeedbackClass.swift in Sources */,
 				D8A545A21E47A3FA004D1239 /* ViewController.swift in Sources */,
 				D82D32281E59F90300542F89 /* ChooseSubject.swift in Sources */,
+				7CE460A71E670E130090EA46 /* FeedbackSubject.swift in Sources */,
 				D830B1591E5DD2B9004D397A /* MyTableViewCell.swift in Sources */,
 				D8A545A01E47A3FA004D1239 /* AppDelegate.swift in Sources */,
 			);
