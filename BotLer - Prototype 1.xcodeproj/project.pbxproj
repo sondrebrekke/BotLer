@@ -15,6 +15,7 @@
 		D8558A5F1E66B46F009046EB /* Settings-128.png in Resources */ = {isa = PBXBuildFile; fileRef = D8558A5E1E66B46F009046EB /* Settings-128.png */; };
 		D8558A611E66B475009046EB /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = D8558A601E66B475009046EB /* Logo.png */; };
 		D875317E1E48A97F00580FE2 /* FeedbackClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D875317D1E48A97F00580FE2 /* FeedbackClass.swift */; };
+		D87F8B441E671158006E213E /* FirstOpen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87F8B431E671158006E213E /* FirstOpen.swift */; };
 		D89850A41E66D5F5003407E7 /* FeedbackIcon-App-29x29@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D89850A31E66D5F5003407E7 /* FeedbackIcon-App-29x29@3x.png */; };
 		D89850A61E66D646003407E7 /* StatisticsIcon-App-29x29@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D89850A51E66D646003407E7 /* StatisticsIcon-App-29x29@3x.png */; };
 		D89850A81E66FD0F003407E7 /* testChooseSubject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89850A71E66FD0F003407E7 /* testChooseSubject.swift */; };
@@ -56,6 +57,7 @@
 		D8558A5E1E66B46F009046EB /* Settings-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Settings-128.png"; sourceTree = "<group>"; };
 		D8558A601E66B475009046EB /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.png; sourceTree = "<group>"; };
 		D875317D1E48A97F00580FE2 /* FeedbackClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackClass.swift; sourceTree = "<group>"; };
+		D87F8B431E671158006E213E /* FirstOpen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstOpen.swift; sourceTree = "<group>"; };
 		D89850A31E66D5F5003407E7 /* FeedbackIcon-App-29x29@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FeedbackIcon-App-29x29@3x.png"; sourceTree = "<group>"; };
 		D89850A51E66D646003407E7 /* StatisticsIcon-App-29x29@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "StatisticsIcon-App-29x29@3x.png"; sourceTree = "<group>"; };
 		D89850A71E66FD0F003407E7 /* testChooseSubject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = testChooseSubject.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 				D875317D1E48A97F00580FE2 /* FeedbackClass.swift */,
 				D830B1581E5DD2B9004D397A /* MyTableViewCell.swift */,
 				7CE460A61E670E130090EA46 /* FeedbackSubject.swift */,
+				D87F8B431E671158006E213E /* FirstOpen.swift */,
 			);
 			path = "BotLer - Prototype 1";
 			sourceTree = "<group>";
@@ -372,6 +375,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D875317E1E48A97F00580FE2 /* FeedbackClass.swift in Sources */,
+				D87F8B441E671158006E213E /* FirstOpen.swift in Sources */,
 				D8A545A21E47A3FA004D1239 /* ViewController.swift in Sources */,
 				D82D32281E59F90300542F89 /* ChooseSubject.swift in Sources */,
 				7CE460A71E670E130090EA46 /* FeedbackSubject.swift in Sources */,
