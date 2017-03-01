@@ -329,7 +329,7 @@
                             <constraint firstItem="8hB-rl-Bsg" firstAttribute="height" secondItem="QKi-Vw-kHa" secondAttribute="height" multiplier="0.043" priority="750" id="zo8-st-pgo"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Feedback" image="FeedbackIcon-App-29x29-kopi.png" id="Yhm-My-zRb"/>
+                    <tabBarItem key="tabBarItem" title="Feedback" image="FeedbackIcon-App-29x29.png" id="Yhm-My-zRb"/>
                     <connections>
                         <outlet property="attendText" destination="Zo2-RS-Qy4" id="Kxo-qD-ZoT"/>
                         <outlet property="insertFeedback" destination="CPR-CM-SLD" id="ljU-4r-QGO"/>
@@ -401,7 +401,7 @@
                             <constraint firstItem="TEA-jb-zXY" firstAttribute="centerY" secondItem="uRy-yV-iqg" secondAttribute="centerY" multiplier="0.12" id="ouW-jb-ehK"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Statistics" image="Icon-App-20x20.png" id="rKx-mN-elg"/>
+                    <tabBarItem key="tabBarItem" title="Statistics" image="StatisticsIcon-App-29x29.png" id="rKx-mN-elg"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t6b-OV-nzC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -539,7 +539,7 @@
                                         <rect key="frame" x="0.0" y="28" width="412" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nDr-JT-TS2" id="1Rm-R3-m3Q">
-                                            <rect key="frame" x="0.0" y="0.0" width="412" height="49.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="412" height="49"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QSq-mE-V2P">
@@ -601,11 +601,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="FeedbackIcon-App-29x29-kopi.png" width="29" height="29"/>
-        <image name="Icon-App-20x20.png" width="20" height="20"/>
+        <image name="FeedbackIcon-App-29x29.png" width="29" height="29"/>
         <image name="Icon-App-29x29.png" width="29" height="29"/>
         <image name="Logo.png" width="1638" height="536"/>
         <image name="Settings-128.png" width="128" height="128"/>
+        <image name="StatisticsIcon-App-29x29.png" width="29" height="29"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="f1Y-Kd-E9Y"/>
