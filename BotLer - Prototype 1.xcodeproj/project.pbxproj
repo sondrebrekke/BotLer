@@ -10,9 +10,9 @@
 		D82D32281E59F90300542F89 /* ChooseSubject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82D32271E59F90300542F89 /* ChooseSubject.swift */; };
 		D82D322B1E59FC6B00542F89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D82D32291E59FC6B00542F89 /* Main.storyboard */; };
 		D830B1591E5DD2B9004D397A /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D830B1581E5DD2B9004D397A /* MyTableViewCell.swift */; };
-		D836782B1E5F337800287419 /* Settings-128.png in Resources */ = {isa = PBXBuildFile; fileRef = D836782A1E5F337800287419 /* Settings-128.png */; };
+		D8558A5F1E66B46F009046EB /* Settings-128.png in Resources */ = {isa = PBXBuildFile; fileRef = D8558A5E1E66B46F009046EB /* Settings-128.png */; };
+		D8558A611E66B475009046EB /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = D8558A601E66B475009046EB /* Logo.png */; };
 		D875317E1E48A97F00580FE2 /* FeedbackClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D875317D1E48A97F00580FE2 /* FeedbackClass.swift */; };
-		D879A81F1E5B318E005C0CD6 /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = D879A81E1E5B318E005C0CD6 /* Logo.png */; };
 		D8A545A01E47A3FA004D1239 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A5459F1E47A3FA004D1239 /* AppDelegate.swift */; };
 		D8A545A21E47A3FA004D1239 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A545A11E47A3FA004D1239 /* ViewController.swift */; };
 		D8A545A71E47A3FA004D1239 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8A545A61E47A3FA004D1239 /* Assets.xcassets */; };
@@ -46,9 +46,9 @@
 		D82D32271E59F90300542F89 /* ChooseSubject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseSubject.swift; sourceTree = "<group>"; };
 		D82D322A1E59FC6B00542F89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D830B1581E5DD2B9004D397A /* MyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
-		D836782A1E5F337800287419 /* Settings-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Settings-128.png"; path = "../../Desktop/Settings-128.png"; sourceTree = "<group>"; };
+		D8558A5E1E66B46F009046EB /* Settings-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Settings-128.png"; sourceTree = "<group>"; };
+		D8558A601E66B475009046EB /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.png; sourceTree = "<group>"; };
 		D875317D1E48A97F00580FE2 /* FeedbackClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackClass.swift; sourceTree = "<group>"; };
-		D879A81E1E5B318E005C0CD6 /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Logo.png; path = ../../Downloads/Logo.png; sourceTree = "<group>"; };
 		D8A5459C1E47A3FA004D1239 /* BotLer - Prototype 1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BotLer - Prototype 1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8A5459F1E47A3FA004D1239 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8A545A11E47A3FA004D1239 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -109,8 +109,8 @@
 		D8A545931E47A3FA004D1239 = {
 			isa = PBXGroup;
 			children = (
-				D836782A1E5F337800287419 /* Settings-128.png */,
-				D879A81E1E5B318E005C0CD6 /* Logo.png */,
+				D8558A601E66B475009046EB /* Logo.png */,
+				D8558A5E1E66B46F009046EB /* Settings-128.png */,
 				D8A5459E1E47A3FA004D1239 /* BotLer - Prototype 1 */,
 				D8A545B31E47A3FA004D1239 /* BotLer - Prototype 1Tests */,
 				D8A545BE1E47A3FA004D1239 /* BotLer - Prototype 1UITests */,
@@ -277,9 +277,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D836782B1E5F337800287419 /* Settings-128.png in Resources */,
-				D879A81F1E5B318E005C0CD6 /* Logo.png in Resources */,
+				D8558A5F1E66B46F009046EB /* Settings-128.png in Resources */,
 				D8A545AA1E47A3FA004D1239 /* LaunchScreen.storyboard in Resources */,
+				D8558A611E66B475009046EB /* Logo.png in Resources */,
 				D8A545A71E47A3FA004D1239 /* Assets.xcassets in Resources */,
 				D82D322B1E59FC6B00542F89 /* Main.storyboard in Resources */,
 			);
