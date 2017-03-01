@@ -64,7 +64,7 @@
         <!--Feedback-->
         <scene sceneID="AsD-JG-29M">
             <objects>
-                <viewController id="69G-aD-MMD" customClass="FeedbackClass" customModule="BotLer___Prototype_1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="chooseSubject" id="69G-aD-MMD" customClass="FeedbackClass" customModule="BotLer___Prototype_1" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ukb-Da-Qux"/>
                         <viewControllerLayoutGuide type="bottom" id="XxR-B9-MbC"/>
@@ -156,9 +156,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ARV-ui-Thu">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ARV-ui-Thu">
                                 <rect key="frame" x="0.0" y="-0.6666666666666643" width="414" height="97"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ARV-ui-Thu" secondAttribute="height" multiplier="375:88" id="bLR-0G-bcH"/>
                                 </constraints>
@@ -327,6 +331,7 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Feedback" image="FeedbackIcon-App-29x29.png" id="Yhm-My-zRb"/>
+                    <navigationItem key="navigationItem" id="HTD-9d-ipn"/>
                     <connections>
                         <outlet property="attendText" destination="Zo2-RS-Qy4" id="Kxo-qD-ZoT"/>
                         <outlet property="insertFeedback" destination="CPR-CM-SLD" id="ljU-4r-QGO"/>
@@ -345,10 +350,10 @@
             </objects>
             <point key="canvasLocation" x="-730.43478260869574" y="1531.7934782608697"/>
         </scene>
-        <!--Feedback Subject-->
+        <!--Subject Feedback-->
         <scene sceneID="v88-Jg-USn">
             <objects>
-                <viewController id="A0p-h2-IKM" customClass="FeedbackSubject" customModule="BotLer___Prototype_1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="A0p-h2-IKM" customClass="SubjectFeedback" customModule="BotLer___Prototype_1" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1PH-P0-Qbp"/>
                         <viewControllerLayoutGuide type="bottom" id="AhY-I6-srh"/>
@@ -364,14 +369,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="HnM-io-7KJ">
-                                <rect key="frame" x="120" y="-24" width="175" height="150"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="nNv-1a-GgH">
+                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nNv-1a-GgH">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="97"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -379,20 +384,28 @@
                                 <rect key="frame" x="120" y="-27" width="175" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FQC-aE-Fpf">
-                                <rect key="frame" x="0.0" y="105" width="414" height="582"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="55" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eTD-lC-SM1">
+                                <rect key="frame" x="0.0" y="102" width="417" height="588"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="tIp-cg-QxO">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="4nW-aC-c3T">
+                                        <rect key="frame" x="0.0" y="28" width="417" height="55"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tIp-cg-QxO" id="Iew-dG-Yvk">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4nW-aC-c3T" id="Hlx-Ei-IS2">
+                                            <rect key="frame" x="0.0" y="0.0" width="384" height="54"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" notEnabled="YES"/>
+                                            <bool key="isElement" value="YES"/>
+                                        </accessibility>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="A0p-h2-IKM" id="iTD-Rl-b2A"/>
+                                    <outlet property="delegate" destination="A0p-h2-IKM" id="1tr-5z-h8p"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.92156862745098034" green="0.92156862745098034" blue="0.92156862745098034" alpha="1" colorSpace="calibratedRGB"/>
@@ -553,7 +566,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xbP-o4-jTc">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xbP-o4-jTc">
                                 <rect key="frame" x="-3" y="0.0" width="416" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -593,7 +606,7 @@
                                         <rect key="frame" x="0.0" y="28" width="412" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nDr-JT-TS2" id="1Rm-R3-m3Q">
-                                            <rect key="frame" x="0.0" y="0.0" width="412" height="49"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="412" height="49.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QSq-mE-V2P">

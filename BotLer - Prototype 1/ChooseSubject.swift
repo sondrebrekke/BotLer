@@ -17,6 +17,14 @@ class ChooseSubject: UIViewController, UITableViewDataSource, UITableViewDelegat
     var fag = [String]()
     let textCellIdentifier = "ShowCell"
     
+    var blogName = String()
+    
+    override func viewWillAppear(_ animated: Bool) {
+        print(blogName)
+    }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.scrapeFag()
