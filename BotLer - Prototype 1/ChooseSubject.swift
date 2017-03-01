@@ -20,11 +20,6 @@ class ChooseSubject: UIViewController, UITableViewDataSource, UITableViewDelegat
     override func viewDidLoad() {
         super.viewDidLoad()
         self.scrapeFag()
-        let launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
-        if launchedBefore  {
-            ChooseSubject.mineFag = UserDefaults.standard.array(forKey: "Key") as! [String]
-        }
-
         // Do any additional setup after loading the view.
     }
     
