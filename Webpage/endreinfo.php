@@ -10,28 +10,41 @@
 	if(!empty($_POST)) //Hvis den informasjonen brukeren tastet inn i feltene fra login.php IKKE er tomme (fortsetter nedover)
 	{
 				
-		$brukernavn = trim($_POST['brukernavn']); //Skal den trimme og legge $_POST brukernavn inn i variabelen $brukernavn slik at den informasjonen brukeren skrev inn enkelt kan hentes ut. 
-		$passord = trim($_POST['passord']);	//Skal den trimme og legge $_POST passord inn i variabelen $passord slik at den informasjonen brukeren skrev inn enkelt kan hentes ut. 
+		$username = trim($_POST['username']); //Skal den trimme og legge $_POST brukernavn inn i variabelen $brukernavn slik at den informasjonen brukeren skrev inn enkelt kan hentes ut. 
+		$password = trim($_POST['password']);	//Skal den trimme og legge $_POST passord inn i variabelen $passord slik at den informasjonen brukeren skrev inn enkelt kan hentes ut. 
 				
 		if($results = $conn->query("SELECT * FROM lecturer WHERE username= '$username' AND password= '$password'")) //Hvis resultatene stemmer med en bruker fra databasen min og tabellen prosjekt_info, skal den hente ut alle feltene. 
 		{
 			if($results->num_rows) { //hvis det er noen rader som stemmer
-				while($row = $results->fetch_object()) { //Gjør klar og henter ut informasjonen
+				while($row = $results->fetch_array()) { //Gjør klar og henter ut informasjonen
 					$records[] = $row; //Legger informasjonen inn i variabelen $records
 				}
+
 				$results->free();
 			}
 			else{ //Hvis det ikke er noen rader som stemmer overens med det brukeren tastet inn, skal den:
-				header("file:///Users/SondreBrekke/Desktop/BotLer/Webpage/feillogin.php"); //redirecte brukeren til siden som er skrevet inn. 
+				header("Location: feillogin.php"); //redirecte brukeren til siden som er skrevet inn. 
 			}
 		}
 		
 	}
+
+	$conn->close();
 ?>
 <!DOCTYPE html>
 <html>
 
 <h1>Du er logget inn.</h1>
 
+
+<center><form name = "Oppdater" action= "endrePassord.php" method="post"> <input type="text" style="text-align:center" name="username" readonly="readonly" value=<?php echo $username; ?>>
+<br> 
+
+<input type="password" style="text-align:center" name="password" value=<?php echo $password; ?>> <!-- Her lager jeg et tekstfelt hvor all skrift som ligger inni felten skal sentreres og feltet heter "brukernavn". Feltet skal også hente ut brukernavnet til brukeren hvor brukernavnet og passordet stemmer -->
+<br>
+<td colspan="2" style="text-align:center;"><input type="submit" value="Endre Passord"></td>
+
+</form>
+</center>
 </html>
 
