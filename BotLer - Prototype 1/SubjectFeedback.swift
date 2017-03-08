@@ -39,5 +39,4 @@ class SubjectFeedback: UIViewController, UITableViewDelegate, UITableViewDataSou
         dismiss(animated: true, completion: nil)
         return indexPath
     }
-
 }
