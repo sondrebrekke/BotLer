@@ -4,10 +4,11 @@
 		<title>
 			BotLer
 		</title>
+		<a href="http://folk.ntnu.no/marentno/login.php"><center><img src ="Logo.png" width="30%" height="26%"></center></a>
+
 	</head>
 	<body>
 		<h1>
-		<center><img src ="Logo.png" width="30%" height="26%"></center>
 		</h1>
 		<form action="endreinfo.php" method="post">
 			<center>
