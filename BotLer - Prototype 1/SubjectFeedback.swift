@@ -10,6 +10,7 @@ import UIKit
 
 class SubjectFeedback: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    static var valgtFag = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,8 +33,11 @@ class SubjectFeedback: UIViewController, UITableViewDelegate, UITableViewDataSou
         return cell
     }
 
-    public func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath){
-        print(ChooseSubject.mineFag[indexPath.row])
+    
+    public func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath?{
+        SubjectFeedback.valgtFag = ChooseSubject.mineFag[indexPath.row]
+        dismiss(animated: true, completion: nil)
+        return indexPath
     }
 
 }

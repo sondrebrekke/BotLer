@@ -14,7 +14,7 @@
         <!--Title-->
         <scene sceneID="b3h-5W-Qgy">
             <objects>
-                <viewController id="bOP-qX-LW8" sceneMemberID="viewController">
+                <viewController id="bOP-qX-LW8" customClass="pushFeedback" customModule="BotLer___Prototype_1" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mMP-ir-Yuv"/>
                         <viewControllerLayoutGuide type="bottom" id="NNS-3k-x60"/>
@@ -44,6 +44,16 @@
                                     <segue destination="BR0-Rr-axU" kind="show" id="aNU-gr-hjN"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="test" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L07-ue-waB">
+                                <rect key="frame" x="66" y="108" width="287" height="119"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.93715304136276245" green="0.93731355667114258" blue="0.93714290857315063" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="0.93715304136276245" green="0.93731355667114258" blue="0.93714290857315063" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -56,15 +66,18 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="r0z-6v-GpS"/>
+                    <connections>
+                        <outlet property="textField" destination="L07-ue-waB" id="G2g-eY-hEV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EQ8-f4-0Gc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1661.5999999999999" y="1552.1739130434785"/>
+            <point key="canvasLocation" x="-1662.3188405797102" y="1552.1739130434785"/>
         </scene>
         <!--Feedback-->
         <scene sceneID="AsD-JG-29M">
             <objects>
-                <viewController storyboardIdentifier="chooseSubject" id="69G-aD-MMD" customClass="FeedbackClass" customModule="BotLer___Prototype_1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="vc" id="69G-aD-MMD" customClass="FeedbackClass" customModule="BotLer___Prototype_1" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ukb-Da-Qux"/>
                         <viewControllerLayoutGuide type="bottom" id="XxR-B9-MbC"/>
@@ -74,7 +87,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="eNO-5c-gEX">
-                                <rect key="frame" x="0.0" y="149.66666666666663" width="414" height="2.3333333333333428"/>
+                                <rect key="frame" x="0.0" y="150" width="414" height="2"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="eNO-5c-gEX" secondAttribute="height" multiplier="375:2" id="uuZ-Nk-bcW"/>
@@ -82,7 +95,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Did you attend today's lecture?" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Zo2-RS-Qy4">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Did you attend today's lecture?" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zo2-RS-Qy4">
                                 <rect key="frame" x="0.0" y="166" width="414" height="36"/>
                                 <color key="backgroundColor" red="0.93715304136276245" green="0.93731355667114258" blue="0.93714290857315063" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <accessibility key="accessibilityConfiguration">
@@ -96,7 +109,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xj5-hf-dUn">
-                                <rect key="frame" x="152" y="526.33333333333337" width="110" height="66"/>
+                                <rect key="frame" x="152" y="526" width="110" height="66"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Xj5-hf-dUn" secondAttribute="height" multiplier="5:3" id="6LS-Dg-LMe"/>
@@ -109,7 +122,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZTW-OR-Inq">
-                                <rect key="frame" x="286.66666666666669" y="526.33333333333337" width="109.66666666666663" height="66"/>
+                                <rect key="frame" x="287" y="526" width="109" height="66"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ZTW-OR-Inq" secondAttribute="height" multiplier="33:20" id="1q4-ag-dxl"/>
@@ -122,7 +135,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SWp-hO-BjT">
-                                <rect key="frame" x="17.666666666666671" y="526.33333333333337" width="109.66666666666666" height="66"/>
+                                <rect key="frame" x="18" y="526.33333333333337" width="109" height="65.333333333333258"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="SWp-hO-BjT" secondAttribute="height" multiplier="5:3" id="ASa-2z-cl0"/>
@@ -135,7 +148,7 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="What do you think about the lecturer's pace?" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="EA6-V8-bEC">
-                                <rect key="frame" x="0.0" y="480.33333333333337" width="414" height="33.000000000000114"/>
+                                <rect key="frame" x="0.0" y="480" width="414" height="33"/>
                                 <color key="backgroundColor" red="0.9371530414" green="0.93731355670000005" blue="0.93714290860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" notEnabled="YES"/>
@@ -148,7 +161,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Cm1-kY-x73">
-                                <rect key="frame" x="0.0" y="98.333333333333329" width="414" height="2"/>
+                                <rect key="frame" x="0.0" y="98" width="414" height="2"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Cm1-kY-x73" secondAttribute="height" multiplier="375:2" id="Mnh-8e-8Qt"/>
@@ -157,7 +170,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ARV-ui-Thu">
-                                <rect key="frame" x="0.0" y="-0.6666666666666643" width="414" height="97"/>
+                                <rect key="frame" x="0.0" y="-1" width="414" height="97"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" notEnabled="YES"/>
@@ -170,7 +183,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FFl-CW-AAI">
-                                <rect key="frame" x="87.000000000000014" y="214" width="103.33333333333336" height="62"/>
+                                <rect key="frame" x="87" y="214" width="103" height="62"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="FFl-CW-AAI" secondAttribute="height" multiplier="5:3" id="nE1-5K-4I6"/>
@@ -184,7 +197,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="foy-1k-oKS">
-                                <rect key="frame" x="222.33333333333331" y="215.66666666666669" width="103.33333333333331" height="62.000000000000057"/>
+                                <rect key="frame" x="222" y="216" width="104" height="62"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="foy-1k-oKS" secondAttribute="height" multiplier="5:3" id="TrO-1W-e0T"/>
@@ -221,8 +234,8 @@
                                     <action selector="textFieldShouldReturn:" destination="69G-aD-MMD" eventType="editingDidEnd" id="orS-ct-6h9"/>
                                 </connections>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Are there any subjects you would like a recap of?" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Dg7-B4-2ik">
-                                <rect key="frame" x="0.0" y="329" width="414" height="70.666666666666686"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" text="Are there any subjects you would like a recap of?" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dg7-B4-2ik">
+                                <rect key="frame" x="0.0" y="329.33333333333331" width="414" height="70.333333333333371"/>
                                 <color key="backgroundColor" red="0.9371530414" green="0.93731355670000005" blue="0.93714290860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" notEnabled="YES"/>
@@ -235,7 +248,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yd5-8a-Kr2">
-                                <rect key="frame" x="151.66666666666669" y="618.33333333333337" width="110.66666666666669" height="55"/>
+                                <rect key="frame" x="152" y="618" width="110" height="55"/>
                                 <color key="backgroundColor" red="0.09284200519323349" green="0.50492769479751587" blue="0.98273533582687378" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Yd5-8a-Kr2" secondAttribute="height" multiplier="2:1" id="afi-EP-uwQ"/>
@@ -249,7 +262,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="GNe-Hb-BYn">
-                                <rect key="frame" x="119.66666666666669" y="-31" width="175" height="150"/>
+                                <rect key="frame" x="120" y="-31" width="175" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="175" id="KWK-XW-T0M"/>
                                     <constraint firstAttribute="height" constant="150" id="YOW-93-GRU"/>
@@ -263,9 +276,18 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="velgFag:" destination="69G-aD-MMD" eventType="touchUpInside" id="sap-QK-799"/>
                                     <segue destination="A0p-h2-IKM" kind="show" id="qjN-so-VzR"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Please choose a subject." textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bw5-Jj-Frj">
+                                <rect key="frame" x="13" y="377" width="392" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.93715304136276245" green="0.93731355667114258" blue="0.93714290857315063" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.34301633883248728" green="0.0" blue="0.0064218530730458714" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="0.93715304136276245" green="0.93731355667114258" blue="0.93714290857315063" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <rect key="contentStretch" x="0.0" y="0.0" width="0.90000000000000002" height="1"/>
@@ -330,10 +352,13 @@
                             <constraint firstItem="Xj5-hf-dUn" firstAttribute="height" secondItem="QKi-Vw-kHa" secondAttribute="height" multiplier="0.09" priority="750" id="yuN-bu-Xbh"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Feedback" image="FeedbackIcon-App-29x29.png" id="Yhm-My-zRb"/>
+                    <tabBarItem key="tabBarItem" title="Feedback" image="FeedbackIcon-App-29x29.png" id="ZxW-ou-XUW"/>
                     <navigationItem key="navigationItem" id="HTD-9d-ipn"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="attend" destination="Zo2-RS-Qy4" id="kwe-t7-CS4"/>
                         <outlet property="attendText" destination="Zo2-RS-Qy4" id="Kxo-qD-ZoT"/>
+                        <outlet property="errorField" destination="bw5-Jj-Frj" id="nOB-Bo-qeE"/>
                         <outlet property="insertFeedback" destination="CPR-CM-SLD" id="ljU-4r-QGO"/>
                         <outlet property="jrBtnP" destination="Xj5-hf-dUn" id="moF-RE-MpM"/>
                         <outlet property="noBtnL" destination="foy-1k-oKS" id="A2G-A4-l5m"/>
@@ -400,6 +425,9 @@
                                             <accessibilityTraits key="traits" notEnabled="YES"/>
                                             <bool key="isElement" value="YES"/>
                                         </accessibility>
+                                        <connections>
+                                            <segue destination="BR0-Rr-axU" kind="show" identifier="goBack" id="JaB-lV-J15"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -606,7 +634,7 @@
                                         <rect key="frame" x="0.0" y="28" width="412" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nDr-JT-TS2" id="1Rm-R3-m3Q">
-                                            <rect key="frame" x="0.0" y="0.0" width="412" height="49.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="412" height="49"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QSq-mE-V2P">
@@ -675,6 +703,6 @@
         <image name="StatisticsIcon-App-29x29.png" width="29" height="29"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="f1Y-Kd-E9Y"/>
+        <segue reference="aNU-gr-hjN"/>
     </inferredMetricsTieBreakers>
 </document>
