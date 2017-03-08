@@ -32,8 +32,10 @@ class SubjectFeedback: UIViewController, UITableViewDelegate, UITableViewDataSou
         return cell
     }
 
-    public func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath){
+    
+    public func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath?{
         print(ChooseSubject.mineFag[indexPath.row])
+        return indexPath
     }
 
 }
