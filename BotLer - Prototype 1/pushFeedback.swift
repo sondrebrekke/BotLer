@@ -13,7 +13,7 @@ class pushFeedback: UIViewController {
     @IBOutlet weak var textField: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        textField.text = SubjectFeedback.valgtFag
+        textField.text = "Your response was sendt to the lecturer of " + SubjectFeedback.valgtFag
 
         // Do any additional setup after loading the view.
     }

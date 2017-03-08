@@ -44,14 +44,14 @@
                                     <segue destination="BR0-Rr-axU" kind="show" id="aNU-gr-hjN"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L07-ue-waB">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="test" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L07-ue-waB">
                                 <rect key="frame" x="66" y="108" width="287" height="119"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.93715304136276245" green="0.93731355667114258" blue="0.93714290857315063" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <bool key="isElement" value="NO"/>
                                 </accessibility>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
@@ -95,7 +95,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Did you attend today's lecture?" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Zo2-RS-Qy4">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Did you attend today's lecture?" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zo2-RS-Qy4">
                                 <rect key="frame" x="0.0" y="166" width="414" height="36"/>
                                 <color key="backgroundColor" red="0.93715304136276245" green="0.93731355667114258" blue="0.93714290857315063" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <accessibility key="accessibilityConfiguration">
@@ -234,7 +234,7 @@
                                     <action selector="textFieldShouldReturn:" destination="69G-aD-MMD" eventType="editingDidEnd" id="orS-ct-6h9"/>
                                 </connections>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Are there any subjects you would like a recap of?" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Dg7-B4-2ik">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" text="Are there any subjects you would like a recap of?" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dg7-B4-2ik">
                                 <rect key="frame" x="0.0" y="329.33333333333331" width="414" height="70.333333333333371"/>
                                 <color key="backgroundColor" red="0.9371530414" green="0.93731355670000005" blue="0.93714290860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <accessibility key="accessibilityConfiguration">
@@ -276,9 +276,18 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="velgFag:" destination="69G-aD-MMD" eventType="touchUpInside" id="sap-QK-799"/>
                                     <segue destination="A0p-h2-IKM" kind="show" id="qjN-so-VzR"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Please choose a subject." textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bw5-Jj-Frj">
+                                <rect key="frame" x="13" y="377" width="392" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.93715304136276245" green="0.93731355667114258" blue="0.93714290857315063" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.34301633883248728" green="0.0" blue="0.0064218530730458714" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="0.93715304136276245" green="0.93731355667114258" blue="0.93714290857315063" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <rect key="contentStretch" x="0.0" y="0.0" width="0.90000000000000002" height="1"/>
@@ -347,7 +356,9 @@
                     <navigationItem key="navigationItem" id="HTD-9d-ipn"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="attend" destination="Zo2-RS-Qy4" id="kwe-t7-CS4"/>
                         <outlet property="attendText" destination="Zo2-RS-Qy4" id="Kxo-qD-ZoT"/>
+                        <outlet property="errorField" destination="bw5-Jj-Frj" id="nOB-Bo-qeE"/>
                         <outlet property="insertFeedback" destination="CPR-CM-SLD" id="ljU-4r-QGO"/>
                         <outlet property="jrBtnP" destination="Xj5-hf-dUn" id="moF-RE-MpM"/>
                         <outlet property="noBtnL" destination="foy-1k-oKS" id="A2G-A4-l5m"/>

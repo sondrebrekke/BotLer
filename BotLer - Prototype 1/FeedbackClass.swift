@@ -17,6 +17,8 @@ class FeedbackClass: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var tfBtnP: UIButton!
     @IBOutlet weak var insertFeedback: UITextField!
 
+    @IBOutlet weak var attend: UITextView!
+    @IBOutlet weak var errorField: UITextView!
     @IBOutlet weak var attendText: UITextView!
     @IBOutlet weak var notAttendText: UITextView!
     @IBOutlet weak var recapText: UITextView!
@@ -28,6 +30,13 @@ class FeedbackClass: UIViewController,UITextFieldDelegate {
         return false
     }
     
+    @IBAction func velgFag(_ sender: Any) {
+        errorField.isHidden = true
+        attendText.isHidden = false
+        attend.isHidden = false
+        yesBtnL.isHidden = false
+        noBtnL.isHidden = false
+    }
     @IBAction func yesBtnLClicked(_ sender: Any) {
         noBtnL.backgroundColor = UIColor.white
         noBtnL.setTitleColor(UIColor.gray, for: .normal)
@@ -137,18 +146,19 @@ class FeedbackClass: UIViewController,UITextFieldDelegate {
         
         super.viewDidLoad()
         self.insertFeedback.delegate = self;
-        
+        errorField.isHidden = false
         tsBtnP.isHidden = true
         jrBtnP.isHidden = true
         tfBtnP.isHidden = true
         paceText.isHidden = true
+        attend.isHidden = true
+        attendText.isHidden = true
         notAttendText.isHidden = true
         recapText.isHidden = true
         insertFeedback.isHidden = true
         submit.isHidden = true
-        yesBtnL.isHidden = false
-        noBtnL.isHidden = false
-        attendText.isHidden = false
+        yesBtnL.isHidden = true
+        noBtnL.isHidden = true
 
     }
 
