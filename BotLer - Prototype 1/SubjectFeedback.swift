@@ -10,6 +10,7 @@ import UIKit
 
 class SubjectFeedback: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    static var valgtFag = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +35,10 @@ class SubjectFeedback: UIViewController, UITableViewDelegate, UITableViewDataSou
 
     
     public func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath?{
-        print(ChooseSubject.mineFag[indexPath.row])
+        SubjectFeedback.valgtFag = ChooseSubject.mineFag[indexPath.row]
+        navigationController?.popViewController(animated: true)
+        dismiss(animated: true, completion: nil)
+        //performSegue(withIdentifier: "goBack", sender: nil)
         return indexPath
     }
 
