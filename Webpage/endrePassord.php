@@ -18,7 +18,15 @@ $records = array(); //Lager en array som informasjonen skal legges inn i.
 $sql = "UPDATE lecturer SET password='$password' WHERE username='$username'";
 
 if ($conn->query($sql) === TRUE) {
-    echo "Record updated successfully";
+    echo "Your password has been changed";
+    ?>
+    <!DOCTYPE html>
+	<html>
+    <center>
+    <input type="button" onclick="location.href='http://folk.ntnu.no/marentno/endreinfo.php';" value="Return to homepage" />
+    </center>
+    </html>
+    <?php
 } else {
     echo "Error updating record: " . $conn->error;
 }
