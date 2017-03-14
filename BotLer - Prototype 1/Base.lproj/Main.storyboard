@@ -288,6 +288,14 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Please choose a subject from the settings icon at &quot;Assignments&quot;. " textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iT3-L7-aRX">
+                                <rect key="frame" x="-2" y="101" width="417" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.9371530414" green="0.93731355670000005" blue="0.93714290860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.34301633879999999" green="0.0" blue="0.0064218530730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="0.93715304136276245" green="0.93731355667114258" blue="0.93714290857315063" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <rect key="contentStretch" x="0.0" y="0.0" width="0.90000000000000002" height="1"/>
@@ -359,6 +367,7 @@
                         <outlet property="attend" destination="Zo2-RS-Qy4" id="kwe-t7-CS4"/>
                         <outlet property="attendText" destination="Zo2-RS-Qy4" id="Kxo-qD-ZoT"/>
                         <outlet property="errorField" destination="bw5-Jj-Frj" id="nOB-Bo-qeE"/>
+                        <outlet property="ikkeValgtFag" destination="iT3-L7-aRX" id="tVM-7p-Ow8"/>
                         <outlet property="insertFeedback" destination="CPR-CM-SLD" id="ljU-4r-QGO"/>
                         <outlet property="jrBtnP" destination="Xj5-hf-dUn" id="moF-RE-MpM"/>
                         <outlet property="noBtnL" destination="foy-1k-oKS" id="A2G-A4-l5m"/>
@@ -368,6 +377,7 @@
                         <outlet property="submit" destination="Yd5-8a-Kr2" id="Gai-Rx-mhU"/>
                         <outlet property="tfBtnP" destination="ZTW-OR-Inq" id="YMC-Hm-ue3"/>
                         <outlet property="tsBtnP" destination="SWp-hO-BjT" id="cgU-wM-ZHG"/>
+                        <outlet property="velgFagKnapp" destination="HYt-jc-oIZ" id="I7D-aa-qpK"/>
                         <outlet property="yesBtnL" destination="FFl-CW-AAI" id="qEE-rt-IFZ"/>
                     </connections>
                 </viewController>
@@ -410,7 +420,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="55" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eTD-lC-SM1">
-                                <rect key="frame" x="0.0" y="102" width="417" height="588"/>
+                                <rect key="frame" x="0.0" y="102" width="417" height="519"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -418,7 +428,7 @@
                                         <rect key="frame" x="0.0" y="28" width="417" height="55"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4nW-aC-c3T" id="Hlx-Ei-IS2">
-                                            <rect key="frame" x="0.0" y="0.0" width="384" height="54"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="384" height="54.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <accessibility key="accessibilityConfiguration">
@@ -634,7 +644,7 @@
                                         <rect key="frame" x="0.0" y="28" width="412" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nDr-JT-TS2" id="1Rm-R3-m3Q">
-                                            <rect key="frame" x="0.0" y="0.0" width="412" height="49"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="412" height="49.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QSq-mE-V2P">
@@ -703,6 +713,6 @@
         <image name="StatisticsIcon-App-29x29.png" width="29" height="29"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="aNU-gr-hjN"/>
+        <segue reference="JaB-lV-J15"/>
     </inferredMetricsTieBreakers>
 </document>
