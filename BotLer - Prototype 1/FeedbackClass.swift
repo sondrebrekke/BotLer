@@ -17,6 +17,8 @@ class FeedbackClass: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var tfBtnP: UIButton!
     @IBOutlet weak var insertFeedback: UITextField!
 
+    @IBOutlet weak var ikkeValgtFag: UITextView!
+    @IBOutlet weak var velgFagKnapp: UIButton!
     @IBOutlet weak var attend: UITextView!
     @IBOutlet weak var errorField: UITextView!
     @IBOutlet weak var attendText: UITextView!
@@ -146,6 +148,13 @@ class FeedbackClass: UIViewController,UITextFieldDelegate {
         
         super.viewDidLoad()
         self.insertFeedback.delegate = self;
+        if(ChooseSubject.mineFag.count < 1){
+            velgFagKnapp.isHidden = true
+            ikkeValgtFag.isHidden = false
+        }
+        else{
+            ikkeValgtFag.isHidden = true
+        }
         errorField.isHidden = false
         tsBtnP.isHidden = true
         jrBtnP.isHidden = true
