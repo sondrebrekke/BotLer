@@ -29,7 +29,7 @@
 		<br>
 		<br>
 		<input type="button" onclick="location.href='http://folk.ntnu.no/marentno/';" value="Logg ut" />
-		<input type="button" onclick="location.href='http://folk.ntnu.no/marentno/endreinfo.php';" value="Return to homepage" />
+		<input type="button" onclick="location.href='http://folk.ntnu.no/marentno/homepage.php';" value="Return to homepage" />
 		<br>
 			<br>
 			COPYRIGHT &#169; 2017 

@@ -9,7 +9,7 @@
 		<h1>
 		<center><img src ="Logo.png" width="30%" height="26%"></center>
 		</h1>
-		<form action="endreinfo.php" method="post">
+		<form action="homepage.php" method="post">
 			<center>
 				<input type="text" name ="username" placeholder="Username" style="text-align:center">
 				<br>

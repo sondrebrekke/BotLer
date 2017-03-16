@@ -10,20 +10,23 @@ $conn = new mysqli('mysql.stud.ntnu.no', 'jorgfb_botler', 'park12', 'jorgfb_botl
 $records = array(); //Lager en array som informasjonen skal legges inn i.
 	if(!empty($_POST)) //Hvis den informasjonen brukeren tastet inn i feltene fra login.php IKKE er tomme (fortsetter nedover)
 	{
-				
-		$username = trim($_POST['username']); //Skal den trimme og legge $_POST brukernavn inn i variabelen $brukernavn slik at den informasjonen brukeren skrev inn enkelt kan hentes ut. 
-		$password = trim($_POST['password']);	//Skal den trimme og legge $_POST passord inn i variabelen $passord slik at den informasjonen brukeren skrev inn enkelt kan hentes ut. 
+		$id = trim($_POST['id']);				
+		$name = trim($_POST['name']); //Skal den trimme og legge $_POST brukernavn inn i variabelen $brukernavn slik at den informasjonen brukeren skrev inn enkelt kan hentes ut. 
+		$description = trim($_POST['description']);	//Skal den trimme og legge $_POST passord inn i variabelen $passord slik at den informasjonen brukeren skrev inn enkelt kan hentes ut. 
+		$deadline = trim($_POST['deadline']);
+
 	}
 
-$sql = "UPDATE lecturer SET password='$password' WHERE username='$username'";
+$sql = "UPDATE assignments SET name='$name', description='$description', deadline='$deadline' WHERE id='$id'";
 
 if ($conn->query($sql) === TRUE) {
-    echo "Your password has been changed";
+    echo "The assignment has been updated";
     ?>
     <!DOCTYPE html>
 	<html>
     <center>
     <input type="button" onclick="location.href='http://folk.ntnu.no/marentno/homepage.php';" value="Return to homepage" />
+    <input type="button" onclick="location.href='http://folk.ntnu.no/marentno/viewAssignment.php';" value="View Assignments" />
     </center>
     </html>
     <?php

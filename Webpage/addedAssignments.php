@@ -52,7 +52,7 @@ if ($conn->query($sql) === TRUE) {
 	<html>
     <center>
     <input type="button" onclick="location.href='http://folk.ntnu.no/marentno/addAssignment.php';" value="Add Another Assignment" />
-    <input type="button" onclick="location.href='http://folk.ntnu.no/marentno/endreinfo.php';" value="Return to homepage" />
+    <input type="button" onclick="location.href='http://folk.ntnu.no/marentno/homepage.php';" value="Return to homepage" />
     </center>
     </html>
     <?php

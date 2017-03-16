@@ -10,7 +10,7 @@
 	<body>
 		<h1>
 		</h1>
-		<form action="endreinfo.php" method="post">
+		<form action="homepage.php" method="post">
 			<center>
 				<input type="text" name ="username" placeholder="Username" style="text-align:center">
 				<br>
