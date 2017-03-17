@@ -24,22 +24,28 @@ class FirstOpen : UIViewController, UITableViewDataSource{
         let launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
         if launchedBefore  {
             ChooseSubject.mineFag = UserDefaults.standard.array(forKey: "Key") as! [String]
+            ChooseSubject.mineFagKoder = [String]()
+            for index in 0...ChooseSubject.mineFag.count-1{
+                ChooseSubject.mineFagKoder.append(ChooseSubject.mineFag[index].components(separatedBy: " ")[0])
+            }
+            print(ChooseSubject.mineFagKoder)
         }
         
-        let url=URL(string:"http://folk.ntnu.no/sondrbre/")
+        let url=URL(string:"http://folk.ntnu.no/sondrbre/index.php")
         do {
             let allContactsData = try Data(contentsOf: url!)
             let allContacts = try JSONSerialization.jsonObject(with: allContactsData, options: JSONSerialization.ReadingOptions.allowFragments) as! [String : AnyObject]
-            if let arrJSON = allContacts["data"] {
+            if let arrJSON = allContacts["data"]{
                 for index in 0...arrJSON.count-1 {
                     
-                    let aObject = arrJSON[index] as! [String : AnyObject]
-                    
-                    ids.append(aObject["id"] as! String)
-                    names.append(aObject["name"] as! String)
-                    subjects.append(aObject["subject"] as! String)
-                    descriptions.append(aObject["description"] as! String)
-                    deadlines.append(aObject["deadline"] as! String)
+                    let aObject = arrJSON.objectAt(index) as! [String : AnyObject]
+                    if(ChooseSubject.mineFagKoder.contains(aObject["subject"] as! String)){
+                        ids.append(aObject["id"] as! String)
+                        names.append(aObject["name"] as! String)
+                        subjects.append(aObject["subject"] as! String)
+                        descriptions.append(aObject["description"] as! String)
+                        deadlines.append(aObject["deadline"] as! String)
+                    }
                 }
             }
             
@@ -63,9 +69,13 @@ class FirstOpen : UIViewController, UITableViewDataSource{
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
-        let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "cell")
-        cell.textLabel?.text = names[indexPath.row] + " - " + subjects[indexPath.row]
+        let cell:AssignmentCell = tableView.dequeueReusableCell(withIdentifier: "cell2", for: indexPath) as! AssignmentCell
+        cell.SubjectCode?.text = subjects[indexPath.row]
+        cell.Desc?.text = descriptions[indexPath.row]
+        cell.Name?.text = names[indexPath.row]
+        cell.Deadline?.text = deadlines[indexPath.row]
         return cell
     }
+    
     
 }
