@@ -568,6 +568,20 @@
                                 <rect key="frame" x="-1" y="101" width="418" height="583"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Nr2-fZ-qhw">
+                                        <rect key="frame" x="0.0" y="28" width="418" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Nr2-fZ-qhw" id="8xI-w5-A0e">
+                                            <rect key="frame" x="0.0" y="0.0" width="418" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="EKi-3I-UDj" id="4nA-a8-dfJ"/>
+                                    <outlet property="delegate" destination="EKi-3I-UDj" id="t42-7P-5Gg"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.93664993523316065" green="0.93664993523316065" blue="0.93664993523316065" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -587,6 +601,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Assignments" image="Icon-App-29x29.png" id="PO2-8e-J6z" userLabel="Assignments"/>
+                    <connections>
+                        <outlet property="tabell" destination="xg8-jf-Cel" id="c7f-Ox-z91"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P7e-b7-sI7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
