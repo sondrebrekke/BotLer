@@ -14,6 +14,7 @@ class ChooseSubject: UIViewController, UITableViewDataSource, UITableViewDelegat
     
     @IBOutlet weak var tabell: UITableView!
     static var mineFag = [String]()
+    static var mineFagKoder = [String]()
     var fag = [String]()
     let textCellIdentifier = "ShowCell"
     

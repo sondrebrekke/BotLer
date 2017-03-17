@@ -29,6 +29,7 @@
 		D8A545B51E47A3FA004D1239 /* BotLer___Prototype_1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A545B41E47A3FA004D1239 /* BotLer___Prototype_1Tests.swift */; };
 		D8A545C01E47A3FA004D1239 /* BotLer___Prototype_1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A545BF1E47A3FA004D1239 /* BotLer___Prototype_1UITests.swift */; };
 		D8F74E051E675CFC006C8D85 /* SubjectFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F74E041E675CFC006C8D85 /* SubjectFeedback.swift */; };
+		D8FB58EE1E7C1CD9008B253F /* AssignmentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FB58ED1E7C1CD9008B253F /* AssignmentCell.swift */; };
 		F868E0089A076F9F027A3F0F /* Pods_BotLer___Prototype_1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10D6FB2ED99D09B1581B3B56 /* Pods_BotLer___Prototype_1.framework */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +82,7 @@
 		D8A545BF1E47A3FA004D1239 /* BotLer___Prototype_1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BotLer___Prototype_1UITests.swift"; sourceTree = "<group>"; };
 		D8A545C11E47A3FA004D1239 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D8F74E041E675CFC006C8D85 /* SubjectFeedback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubjectFeedback.swift; sourceTree = "<group>"; };
+		D8FB58ED1E7C1CD9008B253F /* AssignmentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +170,7 @@
 				D87F8B431E671158006E213E /* FirstOpen.swift */,
 				D8F74E041E675CFC006C8D85 /* SubjectFeedback.swift */,
 				D8244DCD1E6FF62200BD28C0 /* pushFeedback.swift */,
+				D8FB58ED1E7C1CD9008B253F /* AssignmentCell.swift */,
 			);
 			path = "BotLer - Prototype 1";
 			sourceTree = "<group>";
@@ -392,6 +395,7 @@
 				D8F74E051E675CFC006C8D85 /* SubjectFeedback.swift in Sources */,
 				D8A545A21E47A3FA004D1239 /* ViewController.swift in Sources */,
 				D82D32281E59F90300542F89 /* ChooseSubject.swift in Sources */,
+				D8FB58EE1E7C1CD9008B253F /* AssignmentCell.swift in Sources */,
 				D830B1591E5DD2B9004D397A /* MyTableViewCell.swift in Sources */,
 				D8A545A01E47A3FA004D1239 /* AppDelegate.swift in Sources */,
 			);
