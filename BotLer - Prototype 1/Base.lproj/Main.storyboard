@@ -265,6 +265,7 @@
                                     <color key="titleColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="submitClicked:" destination="69G-aD-MMD" eventType="touchUpInside" id="b0L-On-9Uo"/>
                                     <segue destination="bOP-qX-LW8" kind="show" id="hOW-II-MNm"/>
                                 </connections>
                             </button>

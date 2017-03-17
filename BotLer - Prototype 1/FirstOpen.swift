@@ -28,7 +28,6 @@ class FirstOpen : UIViewController, UITableViewDataSource{
             for index in 0...ChooseSubject.mineFag.count-1{
                 ChooseSubject.mineFagKoder.append(ChooseSubject.mineFag[index].components(separatedBy: " ")[0])
             }
-            print(ChooseSubject.mineFagKoder)
         }
         
         let url=URL(string:"http://folk.ntnu.no/sondrbre/index.php")
