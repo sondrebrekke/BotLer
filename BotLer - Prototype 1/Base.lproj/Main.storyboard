@@ -116,7 +116,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xj5-hf-dUn">
-                                <rect key="frame" x="152" y="526.66666666666652" width="110" height="65.333333333333371"/>
+                                <rect key="frame" x="152" y="526.33333333333337" width="110" height="66"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Xj5-hf-dUn" secondAttribute="height" multiplier="5:3" id="6LS-Dg-LMe"/>
@@ -448,7 +448,7 @@
                                         <rect key="frame" x="0.0" y="28" width="414" height="55"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4nW-aC-c3T" id="Hlx-Ei-IS2">
-                                            <rect key="frame" x="0.0" y="0.0" width="381" height="54.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="381" height="55"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <accessibility key="accessibilityConfiguration">
@@ -548,6 +548,102 @@
             </objects>
             <point key="canvasLocation" x="295.19999999999999" y="1450.5247376311845"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="kp7-ag-c0V">
+            <objects>
+                <viewController id="36A-Ze-FF7" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jHi-uR-cY9"/>
+                        <viewControllerLayoutGuide type="bottom" id="A0B-tR-WYj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="agC-fE-w12">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="vj8-X9-czc">
+                                <rect key="frame" x="1" y="0.0" width="414" height="93.333333333333343"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="Q0U-h5-dys">
+                                <rect key="frame" x="120" y="-32" width="175" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2F3-BV-NG5">
+                                <rect key="frame" x="1" y="93" width="414" height="2"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="How to use BotLer ©:" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UDs-Lb-Zch">
+                                <rect key="frame" x="0.0" y="125" width="416" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.92146831750869751" green="0.92162626981735229" blue="0.92145836353302002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eAX-Bq-Iwc">
+                                <rect key="frame" x="37" y="174" width="346" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.92146831750869751" green="0.92162626981735229" blue="0.92145836353302002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
+                                <string key="text">If this is the first time you're running BotLer, please make sure to select your courses by pushing the settings-icon at the "Assignment"-page. </string>
+                                <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="stA-cd-FY9">
+                                <rect key="frame" x="39" y="314" width="346" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.92146831750000002" green="0.92162626979999995" blue="0.92145836349999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
+                                <string key="text">When you're done with an assignment, swipe from right to left and press the "complete"-button. This will automatically update your statistics as well.</string>
+                                <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9vs-nN-xWe">
+                                <rect key="frame" x="41" y="461" width="346" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.92146831750000002" green="0.92162626979999995" blue="0.92145836349999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
+                                <string key="text">After you have attended (or not attended) a lecture, please provide feedback by going to the "Feedback"-page and follow the simple instructions. </string>
+                                <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pTw-Pp-Hot">
+                                <rect key="frame" x="-2" y="637" width="422" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.99019607843137258" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="BACK">
+                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BR0-Rr-axU" kind="show" id="igu-km-Tgy"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92146831750869751" green="0.92162626981735229" blue="0.92145836353302002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Le7-le-E9B" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-221.73913043478262" y="-53.804347826086961"/>
+        </scene>
         <!--Assignments-->
         <scene sceneID="pyD-2l-EOX">
             <objects>
@@ -560,8 +656,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="u6Z-ju-qHX">
-                                <rect key="frame" x="-4" y="0.0" width="418" height="95.333333333333329"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="u6Z-ju-qHX">
+                                <rect key="frame" x="-4" y="0.0" width="418" height="95"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" notEnabled="YES"/>
@@ -570,36 +667,39 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="svh-ff-Vdy">
+                                <rect key="frame" x="24" y="40" width="35" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" image="questionMark.jpeg">
+                                    <color key="titleColor" red="0.14507749680000001" green="0.14510986209999999" blue="0.14507544040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="36A-Ze-FF7" kind="show" id="izQ-kh-cdU"/>
+                                </connections>
+                            </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qER-S5-A9f">
-                                <rect key="frame" x="0.0" y="74" width="414" height="2.6666666666666714"/>
+                                <rect key="frame" x="0.0" y="89" width="414" height="2.6666666666666714"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="BWG-rj-fgC">
-                                <rect key="frame" x="119.66666666666669" y="-31" width="175" height="150"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="LtR-Fh-kJx"/>
-                                    <constraint firstAttribute="width" constant="175" id="i7r-94-eIk"/>
-                                </constraints>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="BWG-rj-fgC">
+                                <rect key="frame" x="120" y="-31" width="175" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6FQ-Ts-XWO">
-                                <rect key="frame" x="-2" y="98.333333333333329" width="416" height="2"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6FQ-Ts-XWO">
+                                <rect key="frame" x="-2" y="98" width="416" height="2"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="6FQ-Ts-XWO" secondAttribute="height" multiplier="377:2" id="3sJ-Zm-u1s"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iSP-CU-jPw">
-                                <rect key="frame" x="352" y="40.666666666666671" width="33" height="29.000000000000014"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iSP-CU-jPw">
+                                <rect key="frame" x="352" y="41" width="33" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="33" id="3eB-Ka-yQs"/>
-                                    <constraint firstAttribute="height" constant="29" id="q1m-BA-fih"/>
-                                </constraints>
                                 <state key="normal" image="Settings-128.png">
                                     <color key="titleColor" red="0.14507749676704407" green="0.1451098620891571" blue="0.14507544040679932" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -607,15 +707,16 @@
                                     <segue destination="V8E-97-oC9" kind="show" id="T0s-I8-Uxg"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="66" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xg8-jf-Cel">
-                                <rect key="frame" x="0.0" y="94" width="414" height="592.33333333333337"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="66" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xg8-jf-Cel">
+                                <rect key="frame" x="0.0" y="94" width="414" height="592"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell2" rowHeight="66" id="Nr2-fZ-qhw" customClass="AssignmentCell" customModule="BotLer___Prototype_1" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="66"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Nr2-fZ-qhw" id="8xI-w5-A0e">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="65.666666666666671"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="65"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="TDT4100" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GYe-dO-x3A" userLabel="SubjectCode">
@@ -682,24 +783,6 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.93664993523316065" green="0.93664993523316065" blue="0.93664993523316065" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="6FQ-Ts-XWO" firstAttribute="centerX" secondItem="UJ9-Jz-v0b" secondAttribute="centerX" constant="-1" id="5VO-J9-C6H"/>
-                            <constraint firstItem="6FQ-Ts-XWO" firstAttribute="top" secondItem="u6Z-ju-qHX" secondAttribute="bottom" constant="3" id="9iO-lt-JDH"/>
-                            <constraint firstItem="BWG-rj-fgC" firstAttribute="centerY" secondItem="UJ9-Jz-v0b" secondAttribute="centerY" multiplier="0.12" id="B7K-pM-v3N"/>
-                            <constraint firstItem="BWG-rj-fgC" firstAttribute="centerX" secondItem="UJ9-Jz-v0b" secondAttribute="centerX" id="ELf-09-gaF"/>
-                            <constraint firstAttribute="trailing" secondItem="6FQ-Ts-XWO" secondAttribute="trailing" id="F5e-OE-JPQ"/>
-                            <constraint firstItem="xg8-jf-Cel" firstAttribute="centerY" secondItem="UJ9-Jz-v0b" secondAttribute="centerY" multiplier="1.06" id="H7D-8A-QtT"/>
-                            <constraint firstAttribute="trailing" secondItem="u6Z-ju-qHX" secondAttribute="trailing" id="RbO-0v-ueQ"/>
-                            <constraint firstItem="xg8-jf-Cel" firstAttribute="height" secondItem="UJ9-Jz-v0b" secondAttribute="height" multiplier="0.805" priority="750" id="Sxd-PM-QGf"/>
-                            <constraint firstItem="iSP-CU-jPw" firstAttribute="centerY" secondItem="UJ9-Jz-v0b" secondAttribute="centerY" multiplier="0.15" id="W13-zD-zyi"/>
-                            <constraint firstItem="u6Z-ju-qHX" firstAttribute="leading" secondItem="UJ9-Jz-v0b" secondAttribute="leading" constant="-4" id="bTl-UW-JSG"/>
-                            <constraint firstItem="xg8-jf-Cel" firstAttribute="width" secondItem="UJ9-Jz-v0b" secondAttribute="width" id="dch-Y0-wgq"/>
-                            <constraint firstItem="iSP-CU-jPw" firstAttribute="centerX" secondItem="UJ9-Jz-v0b" secondAttribute="centerX" multiplier="1.78" id="foc-OO-vtX"/>
-                            <constraint firstItem="u6Z-ju-qHX" firstAttribute="top" secondItem="UJ9-Jz-v0b" secondAttribute="top" id="jKc-hL-XbZ"/>
-                            <constraint firstItem="6FQ-Ts-XWO" firstAttribute="centerY" secondItem="UJ9-Jz-v0b" secondAttribute="centerY" multiplier="0.27" id="m9V-8Q-CPz"/>
-                            <constraint firstItem="xg8-jf-Cel" firstAttribute="centerX" secondItem="UJ9-Jz-v0b" secondAttribute="centerX" id="ubX-tW-a1Q"/>
-                            <constraint firstItem="6FQ-Ts-XWO" firstAttribute="leading" secondItem="UJ9-Jz-v0b" secondAttribute="leading" constant="-2" id="umg-V8-Ww6"/>
-                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Assignments" image="Icon-App-29x29.png" id="PO2-8e-J6z" userLabel="Assignments"/>
                     <connections>
@@ -761,7 +844,7 @@
                                         <rect key="frame" x="0.0" y="28" width="414" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nDr-JT-TS2" id="1Rm-R3-m3Q">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="49.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="49.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QSq-mE-V2P">
@@ -855,8 +938,9 @@
         <image name="Logo.png" width="1638" height="536"/>
         <image name="Settings-128.png" width="128" height="128"/>
         <image name="StatisticsIcon-App-29x29.png" width="29" height="29"/>
+        <image name="questionMark.jpeg" width="626" height="626"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="aNU-gr-hjN"/>
+        <segue reference="igu-km-Tgy"/>
     </inferredMetricsTieBreakers>
 </document>
