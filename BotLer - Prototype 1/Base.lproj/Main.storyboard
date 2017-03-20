@@ -671,7 +671,7 @@
                                 <rect key="frame" x="24" y="40" width="35" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" image="questionMark.jpeg">
+                                <state key="normal" image="Icon-App-29x29-kopi.png">
                                     <color key="titleColor" red="0.14507749680000001" green="0.14510986209999999" blue="0.14507544040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -934,11 +934,11 @@
     </scenes>
     <resources>
         <image name="FeedbackIcon-App-29x29.png" width="29" height="29"/>
+        <image name="Icon-App-29x29-kopi.png" width="29" height="29"/>
         <image name="Icon-App-29x29.png" width="29" height="29"/>
         <image name="Logo.png" width="1638" height="536"/>
         <image name="Settings-128.png" width="128" height="128"/>
         <image name="StatisticsIcon-App-29x29.png" width="29" height="29"/>
-        <image name="questionMark.jpeg" width="626" height="626"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="igu-km-Tgy"/>
