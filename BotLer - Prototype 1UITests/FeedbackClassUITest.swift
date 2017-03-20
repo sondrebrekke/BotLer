@@ -28,21 +28,37 @@ class FeedbackClassUITest: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
+    func testChooseButton() {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        
+    
         
         let app = XCUIApplication()
         app.tabBars.buttons["Feedback"].tap()
         app.buttons["Choose subject"].tap()
-        app.tables.staticTexts["TMA4245 - Statistikk"].tap()
+        app.tables.staticTexts["TMA4260 - Statistikk"].tap()
+        
+        
+        
+        //Tester om yesButton er klikket
         let yesButton = app.buttons["Yes"]
         let justRightButton = app.buttons["Just right"]
+        XCTAssertEqual(yesButton.isSelected, false)
         yesButton.tap()
+        XCTAssertEqual(yesButton.isSelected, true)
+        
+        //Tester om justRightButton er klikket
+        XCTAssertEqual(justRightButton.isSelected, false)
         justRightButton.tap()
+        XCTAssertEqual(justRightButton.isSelected, true)
+        
+        
         app.buttons["SUBMIT"].tap()
         app.buttons["Back"].tap()
         
+      
     }
     
 }
