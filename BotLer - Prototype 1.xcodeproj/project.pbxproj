@@ -7,9 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7C959D131E7047C400546402 /* SubjectFeedbackTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C959D121E7047C400546402 /* SubjectFeedbackTest.swift */; };
-		7C959D151E7047D600546402 /* ChooseSubjectTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C959D141E7047D600546402 /* ChooseSubjectTest.swift */; };
-		B1DBC88A1E70299E00D9A787 /* FeedbackClassTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DBC8891E70299E00D9A787 /* FeedbackClassTest.swift */; };
+		7C35F95B1E8015A100A4B5EE /* FeedbackClassUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C35F95A1E8015A100A4B5EE /* FeedbackClassUITest.swift */; };
 		D8244DCE1E6FF62200BD28C0 /* pushFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8244DCD1E6FF62200BD28C0 /* pushFeedback.swift */; };
 		D82D32281E59F90300542F89 /* ChooseSubject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82D32271E59F90300542F89 /* ChooseSubject.swift */; };
 		D82D322B1E59FC6B00542F89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D82D32291E59FC6B00542F89 /* Main.storyboard */; };
@@ -54,9 +52,7 @@
 		0C22CE5B46FA1562E1EA089B /* Pods-BotLer - Prototype 1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BotLer - Prototype 1.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BotLer - Prototype 1/Pods-BotLer - Prototype 1.debug.xcconfig"; sourceTree = "<group>"; };
 		10D6FB2ED99D09B1581B3B56 /* Pods_BotLer___Prototype_1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_BotLer___Prototype_1.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A2B9EA08E8FFEC4DED7017D /* Pods-BotLer - Prototype 1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BotLer - Prototype 1.release.xcconfig"; path = "Pods/Target Support Files/Pods-BotLer - Prototype 1/Pods-BotLer - Prototype 1.release.xcconfig"; sourceTree = "<group>"; };
-		7C959D121E7047C400546402 /* SubjectFeedbackTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubjectFeedbackTest.swift; sourceTree = "<group>"; };
-		7C959D141E7047D600546402 /* ChooseSubjectTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseSubjectTest.swift; sourceTree = "<group>"; };
-		B1DBC8891E70299E00D9A787 /* FeedbackClassTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackClassTest.swift; sourceTree = "<group>"; };
+		7C35F95A1E8015A100A4B5EE /* FeedbackClassUITest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackClassUITest.swift; sourceTree = "<group>"; };
 		D8244DCD1E6FF62200BD28C0 /* pushFeedback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pushFeedback.swift; sourceTree = "<group>"; };
 		D82D32271E59F90300542F89 /* ChooseSubject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseSubject.swift; sourceTree = "<group>"; };
 		D82D322A1E59FC6B00542F89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -180,9 +176,6 @@
 			children = (
 				D8A545B41E47A3FA004D1239 /* BotLer___Prototype_1Tests.swift */,
 				D8A545B61E47A3FA004D1239 /* Info.plist */,
-				7C959D141E7047D600546402 /* ChooseSubjectTest.swift */,
-				7C959D121E7047C400546402 /* SubjectFeedbackTest.swift */,
-				B1DBC8891E70299E00D9A787 /* FeedbackClassTest.swift */,
 			);
 			path = "BotLer - Prototype 1Tests";
 			sourceTree = "<group>";
@@ -192,6 +185,7 @@
 			children = (
 				D8A545BF1E47A3FA004D1239 /* BotLer___Prototype_1UITests.swift */,
 				D8A545C11E47A3FA004D1239 /* Info.plist */,
+				7C35F95A1E8015A100A4B5EE /* FeedbackClassUITest.swift */,
 			);
 			path = "BotLer - Prototype 1UITests";
 			sourceTree = "<group>";
@@ -405,11 +399,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1DBC88A1E70299E00D9A787 /* FeedbackClassTest.swift in Sources */,
-				7C959D131E7047C400546402 /* SubjectFeedbackTest.swift in Sources */,
 				D8A545B51E47A3FA004D1239 /* BotLer___Prototype_1Tests.swift in Sources */,
 				D89850A81E66FD0F003407E7 /* testChooseSubject.swift in Sources */,
-				7C959D151E7047D600546402 /* ChooseSubjectTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +409,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8A545C01E47A3FA004D1239 /* BotLer___Prototype_1UITests.swift in Sources */,
+				7C35F95B1E8015A100A4B5EE /* FeedbackClassUITest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
