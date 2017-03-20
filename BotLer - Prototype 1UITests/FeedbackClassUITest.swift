@@ -28,14 +28,16 @@ class FeedbackClassUITest: XCTestCase {
         super.tearDown()
     }
     
-    func testChooseButton() {
+    func testAttendedLecture() {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         
         
+        
+        
     
         
-        let app = XCUIApplication()
+     /*   let app = XCUIApplication()
         app.tabBars.buttons["Feedback"].tap()
         app.buttons["Choose subject"].tap()
         app.tables.staticTexts["TMA4260 - Statistikk"].tap()
@@ -56,9 +58,13 @@ class FeedbackClassUITest: XCTestCase {
         
         
         app.buttons["SUBMIT"].tap()
-        app.buttons["Back"].tap()
+        app.buttons["Back"].tap() */
         
       
+    }
+    
+    func testDidNotAttendLecture() {
+        
     }
     
 }
