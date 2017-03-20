@@ -32,6 +32,7 @@ class FeedbackClass: UIViewController,UITextFieldDelegate {
     static var pace:String = ""
     static var valgtFag:String = ""
     
+    
     func textFieldShouldReturn(_ insertFeedback: UITextField) -> Bool {
         self.view.endEditing(true)
         return false
@@ -138,6 +139,7 @@ class FeedbackClass: UIViewController,UITextFieldDelegate {
         noBtnL.isHidden = false
     }
     @IBAction func yesBtnLClicked(_ sender: Any) {
+        yesBtnL.isSelected = true
         noBtnL.backgroundColor = UIColor.white
         noBtnL.setTitleColor(UIColor.gray, for: .normal)
         if (yesBtnL.backgroundColor == UIColor(red:0.00, green:0.40, blue:1.00, alpha:1.0)){
@@ -174,6 +176,8 @@ class FeedbackClass: UIViewController,UITextFieldDelegate {
             noBtnL.backgroundColor = UIColor.white
             noBtnL.setTitleColor(UIColor.gray, for: .normal)
             submit.isHidden = true
+            notAttendText.isHidden = true
+            insertFeedback.isHidden = true
         }
         else{
             noBtnL.backgroundColor = UIColor(red:0.00, green:0.40, blue:1.00, alpha:1.0)
@@ -208,6 +212,7 @@ class FeedbackClass: UIViewController,UITextFieldDelegate {
     }
     
     @IBAction func jrBtnPClicked(_ sender: Any) {
+        jrBtnP.isSelected = true
         tsBtnP.backgroundColor = UIColor.white
         tfBtnP.backgroundColor = UIColor.white
         tsBtnP.setTitleColor(UIColor.gray, for: .normal)
@@ -266,7 +271,14 @@ class FeedbackClass: UIViewController,UITextFieldDelegate {
         submit.isHidden = true
         yesBtnL.isHidden = true
         noBtnL.isHidden = true
-
+        
+    
+        tsBtnP.isSelected = false
+        jrBtnP.isSelected = false
+        tfBtnP.isSelected = false
+        submit.isSelected = false
+        yesBtnL.isSelected = false
+        noBtnL.isSelected = false
     }
 
     override func didReceiveMemoryWarning() {
