@@ -1,1 +1,1 @@
-BotLer - Prototype 1
+BotLer helps students organize and structure their studies, handing them information about the assignments including delivery dates, to secure no late deliveries. With direct feedback to the lecturer about pace and difficult topics, the application redefines the student-teacher relationship and makes lecture adaption easier than ever before.
