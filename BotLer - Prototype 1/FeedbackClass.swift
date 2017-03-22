@@ -39,17 +39,17 @@ class FeedbackClass: UIViewController,UITextFieldDelegate {
     }
     
     @IBAction func submitClicked(_ sender: Any) {
-        if (yesBtnL.backgroundColor == UIColor(red:0.00, green:0.40, blue:1.00, alpha:1.0)){
+        if (yesBtnL.backgroundColor == UIColor(red: 35/255, green: 132/255, blue: 247/255, alpha: 1)){
             FeedbackClass.attended = "YES"
         }
         else{
             FeedbackClass.attended = "NO"
         }
         FeedbackClass.feedback = insertFeedback.text!
-        if (tsBtnP.backgroundColor == UIColor(red:0.00, green:0.40, blue:1.00, alpha:1.0)){
+        if (tsBtnP.backgroundColor == UIColor(red: 35/255, green: 132/255, blue: 247/255, alpha: 1)){
             FeedbackClass.pace = "TOO SLOW"
         }
-        else if (jrBtnP.backgroundColor == UIColor(red:0.00, green:0.40, blue:1.00, alpha:1.0)){
+        else if (jrBtnP.backgroundColor == UIColor(red: 35/255, green: 132/255, blue: 247/255, alpha: 1)){
             FeedbackClass.pace = "JUST RIGHT"
         }
         else{
@@ -142,7 +142,7 @@ class FeedbackClass: UIViewController,UITextFieldDelegate {
         noBtnL.isSelected = false
         noBtnL.backgroundColor = UIColor.white
         noBtnL.setTitleColor(UIColor.gray, for: .normal)
-        if (yesBtnL.backgroundColor == UIColor(red:0.00, green:0.40, blue:1.00, alpha:1.0)){
+        if (yesBtnL.backgroundColor == UIColor(red: 35/255, green: 132/255, blue: 247/255, alpha: 1)){
             yesBtnL.isSelected = false
             yesBtnL.backgroundColor = UIColor.white
             yesBtnL.setTitleColor(UIColor.gray, for: .normal)
@@ -157,7 +157,7 @@ class FeedbackClass: UIViewController,UITextFieldDelegate {
         }
         else{
             yesBtnL.isSelected = true
-            yesBtnL.backgroundColor = UIColor(red:0.00, green:0.40, blue:1.00, alpha:1.0)
+            yesBtnL.backgroundColor = UIColor(red: 35/255, green: 132/255, blue: 247/255, alpha: 1)
             yesBtnL.setTitleColor(UIColor.white, for: .normal)
             tsBtnP.isHidden = false
             jrBtnP.isHidden = false
@@ -175,7 +175,7 @@ class FeedbackClass: UIViewController,UITextFieldDelegate {
         yesBtnL.isSelected = false
         yesBtnL.backgroundColor = UIColor.white
         yesBtnL.setTitleColor(UIColor.gray, for: .normal)
-        if (noBtnL.backgroundColor == UIColor(red:0.00, green:0.40, blue:1.00, alpha:1.0)){
+        if (noBtnL.backgroundColor == UIColor(red: 35/255, green: 132/255, blue: 247/255, alpha: 1)){
             noBtnL.isSelected = false
             noBtnL.backgroundColor = UIColor.white
             noBtnL.setTitleColor(UIColor.gray, for: .normal)
@@ -185,7 +185,7 @@ class FeedbackClass: UIViewController,UITextFieldDelegate {
         }
         else{
             noBtnL.isSelected = true
-            noBtnL.backgroundColor = UIColor(red:0.00, green:0.40, blue:1.00, alpha:1.0)
+            noBtnL.backgroundColor = UIColor(red: 35/255, green: 132/255, blue: 247/255, alpha: 1)
             noBtnL.setTitleColor(UIColor.white, for: .normal)
             tsBtnP.isHidden = true
             jrBtnP.isHidden = true
@@ -205,7 +205,7 @@ class FeedbackClass: UIViewController,UITextFieldDelegate {
         tfBtnP.backgroundColor = UIColor.white
         jrBtnP.setTitleColor(UIColor.gray, for: .normal)
         tfBtnP.setTitleColor(UIColor.gray, for: .normal)
-        if (tsBtnP.backgroundColor == UIColor(red:0.00, green:0.40, blue:1.00, alpha:1.0)){
+        if (tsBtnP.backgroundColor == UIColor(red: 35/255, green: 132/255, blue: 247/255, alpha: 1)){
             tsBtnP.isSelected = false
             tsBtnP.backgroundColor = UIColor.white
             tsBtnP.setTitleColor(UIColor.gray, for: .normal)
@@ -213,7 +213,7 @@ class FeedbackClass: UIViewController,UITextFieldDelegate {
         }
         else{
             tsBtnP.isSelected = true
-            tsBtnP.backgroundColor = UIColor(red:0.00, green:0.40, blue:1.00, alpha:1.0)
+            tsBtnP.backgroundColor = UIColor(red: 35/255, green: 132/255, blue: 247/255, alpha: 1)
             tsBtnP.setTitleColor(UIColor.white, for: .normal)
             submit.isHidden = false
         }
@@ -227,7 +227,7 @@ class FeedbackClass: UIViewController,UITextFieldDelegate {
         tsBtnP.setTitleColor(UIColor.gray, for: .normal)
         tfBtnP.setTitleColor(UIColor.gray, for: .normal)
         
-        if (jrBtnP.backgroundColor == UIColor(red:0.00, green:0.40, blue:1.00, alpha:1.0)){
+        if (jrBtnP.backgroundColor == UIColor(red: 35/255, green: 132/255, blue: 247/255, alpha: 1)){
             jrBtnP.isSelected = false
             jrBtnP.backgroundColor = UIColor.white
             jrBtnP.setTitleColor(UIColor.gray, for: .normal)
@@ -235,7 +235,7 @@ class FeedbackClass: UIViewController,UITextFieldDelegate {
         }
         else{
             jrBtnP.isSelected = true
-            jrBtnP.backgroundColor = UIColor(red:0.00, green:0.40, blue:1.00, alpha:1.0)
+            jrBtnP.backgroundColor = UIColor(red: 35/255, green: 132/255, blue: 247/255, alpha: 1)
             jrBtnP.setTitleColor(UIColor.white, for: .normal)
             submit.isHidden = false
         }
@@ -248,7 +248,7 @@ class FeedbackClass: UIViewController,UITextFieldDelegate {
         tsBtnP.backgroundColor = UIColor.white
         jrBtnP.setTitleColor(UIColor.gray, for: .normal)
         tsBtnP.setTitleColor(UIColor.gray, for: .normal)
-        if (tfBtnP.backgroundColor == UIColor(red:0.00, green:0.40, blue:1.00, alpha:1.0)){
+        if (tfBtnP.backgroundColor == UIColor(red: 35/255, green: 132/255, blue: 247/255, alpha: 1)){
             tfBtnP.isSelected = false
             tfBtnP.backgroundColor = UIColor.white
             tfBtnP.setTitleColor(UIColor.gray, for: .normal)
@@ -256,7 +256,7 @@ class FeedbackClass: UIViewController,UITextFieldDelegate {
         }
         else{
             tfBtnP.isSelected = true
-            tfBtnP.backgroundColor = UIColor(red:0.00, green:0.40, blue:1.00, alpha:1.0)
+            tfBtnP.backgroundColor = UIColor(red: 35/255, green: 132/255, blue: 247/255, alpha: 1)
             tfBtnP.setTitleColor(UIColor.white, for: .normal)
             submit.isHidden = false
         }
