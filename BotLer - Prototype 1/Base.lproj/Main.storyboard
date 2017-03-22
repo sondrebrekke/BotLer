@@ -121,6 +121,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Xj5-hf-dUn" secondAttribute="height" multiplier="5:3" id="6LS-Dg-LMe"/>
                                 </constraints>
+                                <color key="tintColor" red="0.09284200519323349" green="0.50492769479751587" blue="0.98273533582687378" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Just right">
                                     <color key="titleColor" red="0.61943376064300537" green="0.6235852837562561" blue="0.62349897623062134" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -134,6 +135,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ZTW-OR-Inq" secondAttribute="height" multiplier="33:20" id="1q4-ag-dxl"/>
                                 </constraints>
+                                <color key="tintColor" red="0.09284200519323349" green="0.50492769479751587" blue="0.98273533582687378" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Too fast">
                                     <color key="titleColor" red="0.69785714149475098" green="0.70202124118804932" blue="0.70192140340805054" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -147,6 +149,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="SWp-hO-BjT" secondAttribute="height" multiplier="5:3" id="ASa-2z-cl0"/>
                                 </constraints>
+                                <color key="tintColor" red="0.09284200519323349" green="0.50492769479751587" blue="0.98273533582687378" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Too slow">
                                     <color key="titleColor" red="0.64296072721481323" green="0.64711600542068481" blue="0.64702564477920532" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -195,7 +198,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="FFl-CW-AAI" secondAttribute="height" multiplier="5:3" id="nE1-5K-4I6"/>
                                 </constraints>
-                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.09284200519323349" green="0.50492769479751587" blue="0.98273533582687378" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Yes">
                                     <color key="titleColor" red="0.60230121550000004" green="0.60826459389999998" blue="0.60826459389999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -209,6 +212,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="foy-1k-oKS" secondAttribute="height" multiplier="5:3" id="TrO-1W-e0T"/>
                                 </constraints>
+                                <color key="tintColor" red="0.09284200519323349" green="0.50492769479751587" blue="0.98273533582687378" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="No">
                                     <color key="titleColor" red="0.60230121553697624" green="0.60826459390862941" blue="0.60826459390862941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -716,7 +720,7 @@
                                         <rect key="frame" x="0.0" y="28" width="414" height="66"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Nr2-fZ-qhw" id="8xI-w5-A0e">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="65"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="65.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="TDT4100" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GYe-dO-x3A" userLabel="SubjectCode">
@@ -844,7 +848,7 @@
                                         <rect key="frame" x="0.0" y="28" width="414" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nDr-JT-TS2" id="1Rm-R3-m3Q">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="49.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QSq-mE-V2P">
@@ -880,6 +884,17 @@
                                     <outlet property="delegate" destination="V8E-97-oC9" id="7O2-kF-Ms7"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vbn-aK-hDJ">
+                                <rect key="frame" x="335" y="34" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.5871690491271625" blue="0.83821255223937285" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Reset">
+                                    <color key="titleColor" red="0.96981981286427354" green="1" blue="0.34226924964143757" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetCompletedAssigments:" destination="V8E-97-oC9" eventType="touchUpInside" id="kMh-JS-8iy"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -905,6 +920,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="resetButton" destination="Vbn-aK-hDJ" id="jtJ-Bi-w88"/>
                         <outlet property="tabell" destination="mAT-ya-mBn" id="mU2-JC-0hg"/>
                     </connections>
                 </viewController>
@@ -941,6 +957,6 @@
         <image name="question.png" width="87" height="87"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="igu-km-Tgy"/>
+        <segue reference="f1Y-Kd-E9Y"/>
     </inferredMetricsTieBreakers>
 </document>
