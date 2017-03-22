@@ -7,59 +7,57 @@
 //
 
 import UIKit
-import Kanna
-import Alamofire
+//import Kanna
+//import Alamofire
 
 class ChooseSubject: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     @IBOutlet weak var tabell: UITableView!
     static var mineFag = [String]()
     static var mineFagKoder = [String]()
+    var fagKode = [String]()
     var fag = [String]()
     let textCellIdentifier = "ShowCell"
+    @IBOutlet weak var resetButton: UIButton!
     
     var blogName = String()
     
     override func viewWillAppear(_ animated: Bool) {
-        print(blogName)
+        if(FirstOpen.completedAssignments.count==0){
+            resetButton.isHidden = true
+        }
     }
     
+    @IBAction func resetCompletedAssigments(_ sender: Any) {
+        FirstOpen.completedAssignments = [String]()
+        FirstOpen.completeAssignment()
+        resetButton.isHidden = true
+    }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.scrapeFag()
-        // Do any additional setup after loading the view.
-    }
-    
-    func scrapeFag() -> Void {
-        Alamofire.request("http://folk.ntnu.no/marentno/fag.html").responseString { response in
-            if let html = response.result.value {
-                self.parseHTML(html: html)
-            }
-        }
-    }
-    
-    
-    func parseHTML(html: String) -> Void {
-        if let doc = Kanna.HTML(html: html, encoding: String.Encoding.utf8) {
-            
-            // Search for nodes by CSS selector
-            for show in doc.css("p") {
-                
-                // Strip the string of surrounding whitespace.
-                let showString = show.text!.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
-                
-                // Alle fag starter med fagkode
-                let regex = try! NSRegularExpression(pattern: "^()", options: [.caseInsensitive])
-                
-                if regex.firstMatch(in: showString, options: [], range: NSMakeRange(0, showString.characters.count)) != nil {
-                    fag.append(showString)
+        let url=URL(string:"http://folk.ntnu.no/sondrbre/getSubjects.php")
+        do {
+            let allContactsData = try Data(contentsOf: url!)
+            let allContacts = try JSONSerialization.jsonObject(with: allContactsData, options: JSONSerialization.ReadingOptions.allowFragments) as! [String : AnyObject]
+            if let arrJSON = allContacts["subjects"]{
+                for index in 0...arrJSON.count-1 {
+                    
+                    let aObject = arrJSON.objectAt(index) as! [String : AnyObject]
+                    fagKode.append(aObject["subject_code"] as! String)
+                    fag.append(aObject["subject_name"] as! String)
                 }
             }
+            
+            self.tabell.reloadData()
         }
-        self.tabell.reloadData()
+        catch {
+            
+        }
+
     }
+
 
     
     static func lagre(){
@@ -82,7 +80,7 @@ class ChooseSubject: UIViewController, UITableViewDataSource, UITableViewDelegat
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell:MyTableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MyTableViewCell
-        cell.content.text = fag[indexPath.row]
+        cell.content.text = fagKode[indexPath.row] + " - " + fag[indexPath.row]
         cell.content.tag = indexPath.row
         if(!ChooseSubject.mineFag.contains(cell.content.text!)){
             cell.svitsj.setOn(false, animated: false)
