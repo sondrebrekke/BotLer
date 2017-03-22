@@ -37,7 +37,8 @@ class FeedbackClassUITest: XCTestCase {
         let app = XCUIApplication()
         app.tabBars.buttons["Feedback"].tap()
         app.buttons["Choose subject"].tap()
-        app.tables.staticTexts["TDT4140 - Programvareutvikling"].tap()
+        app.tables.staticTexts["TDT4140 - Software Engineering"].tap()
+        
         
         //Lager de aktuelle knappene på Feedback siden
         let yesButton = app.buttons["Yes"]
@@ -97,11 +98,13 @@ class FeedbackClassUITest: XCTestCase {
         
         app.tabBars.buttons["Feedback"].tap()
         app.buttons["Choose subject"].tap()
-        app.tables.staticTexts["TDT4120 - Algoritmer og datastrukturer"].tap()
+        XCUIApplication().tables.staticTexts["TDT4120 - Algorithms and Data Structures"].tap()
         
+    
+        //Tester at yesButton og noButton ikke er valgt før vi klikker på noButton
         XCTAssertEqual(yesButton.isSelected, false)
         XCTAssertEqual(noButton.isSelected, false)
-       
+        
         
         //Tester at justRightButton, tooFastButton og tooSlowButton ikke finnes før vi trykker på noButton
         XCTAssertEqual(justRightButton.exists, false)
@@ -116,18 +119,15 @@ class FeedbackClassUITest: XCTestCase {
         XCTAssertEqual(tooFastButton.exists, false)
         XCTAssertEqual(tooSlowButton.exists, false)
         
-        
+        //Tester at noButton er valgt etter klikk, og at yesButton ikke er valgt når noButton er valgt
         XCTAssertEqual(yesButton.isSelected, false)
         XCTAssertEqual(noButton.isSelected, true)
         
         
-        
         app.buttons["SUBMIT"].tap()
         app.buttons["Back"].tap()
-        
-        
-        
+    
         
     }
-    
 }
+
