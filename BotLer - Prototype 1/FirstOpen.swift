@@ -59,6 +59,9 @@ class FirstOpen : UIViewController, UITableViewDataSource{
         catch {
             
         }
+        if (ChooseSubject.mineFag.count == 0){
+            tabell.isHidden = true
+        }
         
         // Do any additional setup after loading the view.
     }
