@@ -29,9 +29,15 @@ class ChooseSubject: UIViewController, UITableViewDataSource, UITableViewDelegat
     }
     
     @IBAction func resetCompletedAssigments(_ sender: Any) {
-        FirstOpen.completedAssignments = [String]()
-        FirstOpen.completeAssignment()
-        resetButton.isHidden = true
+        let alert = UIAlertController(title: "Warning", message: "Are you sure you want to reset your completed assignments? All data will be lost", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title:"Cancel", style: UIAlertActionStyle.cancel, handler:{(action) in alert.dismiss(animated:true, completion: nil)
+        }))
+        alert.addAction(UIAlertAction(title:"Reset", style: UIAlertActionStyle.destructive, handler:{(action) in alert.dismiss(animated:true, completion: nil)
+            FirstOpen.completedAssignments = [String]()
+            FirstOpen.completeAssignment()
+            self.resetButton.isHidden = true
+        }))
+        self.present(alert, animated:true, completion: nil)
     }
     
     
@@ -55,7 +61,7 @@ class ChooseSubject: UIViewController, UITableViewDataSource, UITableViewDelegat
         catch {
             
         }
-
+        resetButton.layer.cornerRadius = 12
     }
 
 
