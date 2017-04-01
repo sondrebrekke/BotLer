@@ -39,5 +39,10 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
+	<key>LSApplicationCategoryType</key>
+	<string>Photo
+Key:  Privacy - Photo Library Usage Description Value:  $(PRODUCT_NAME) photo use
+Camera
+Key:  Privacy - Camera Usage Description Value:  $(PRODUCT_NAME) camera use</string>
 </dict>
 </plist>

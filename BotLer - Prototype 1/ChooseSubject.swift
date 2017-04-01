@@ -7,27 +7,17 @@
 //
 
 import UIKit
-//import Kanna
-//import Alamofire
 
 class ChooseSubject: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     @IBOutlet weak var tabell: UITableView!
     static var mineFag = [String]()
     static var mineFagKoder = [String]()
-    var fagKode = [String]()
-    var fag = [String]()
     let textCellIdentifier = "ShowCell"
     @IBOutlet weak var resetButton: UIButton!
     
     var blogName = String()
-    
-    override func viewWillAppear(_ animated: Bool) {
-        if(FirstOpen.completedAssignments.count==0){
-            resetButton.isHidden = true
-        }
-    }
-    
+
     @IBAction func resetCompletedAssigments(_ sender: Any) {
         let alert = UIAlertController(title: "Warning", message: "Are you sure you want to reset your completed assignments? All data will be lost", preferredStyle: UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction(title:"Cancel", style: UIAlertActionStyle.cancel, handler:{(action) in alert.dismiss(animated:true, completion: nil)
@@ -40,31 +30,37 @@ class ChooseSubject: UIViewController, UITableViewDataSource, UITableViewDelegat
         self.present(alert, animated:true, completion: nil)
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        if(FirstOpen.completedAssignments.count==0){
+            resetButton.isHidden = true
+        }
+        if(constants.firstOpen){
+            showAssignments()
+        }
+    }
+
+
+    func showAssignments(){
+        constants.firstOpen = false
         let url=URL(string:"http://folk.ntnu.no/sondrbre/getSubjects.php")
         do {
             let allContactsData = try Data(contentsOf: url!)
             let allContacts = try JSONSerialization.jsonObject(with: allContactsData, options: JSONSerialization.ReadingOptions.allowFragments) as! [String : AnyObject]
             if let arrJSON = allContacts["subjects"]{
                 for index in 0...arrJSON.count-1 {
-                    
                     let aObject = arrJSON.objectAt(index) as! [String : AnyObject]
-                    fagKode.append(aObject["subject_code"] as! String)
-                    fag.append(aObject["subject_name"] as! String)
+                    constants.fagKode.append(aObject["subject_code"] as! String)
+                    constants.fag.append(aObject["subject_name"] as! String)
                 }
             }
             
             self.tabell.reloadData()
         }
         catch {
-            
         }
         resetButton.layer.cornerRadius = 12
     }
-
-
     
     static func lagre(){
         UserDefaults.standard.set(mineFag, forKey: "Key")
@@ -73,20 +69,19 @@ class ChooseSubject: UIViewController, UITableViewDataSource, UITableViewDelegat
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     @available(iOS 2.0, *)
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return (fag.count)
+        return (constants.fag.count)
     }
 
     @available(iOS 2.0, *)
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell:MyTableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MyTableViewCell
-        cell.content.text = fagKode[indexPath.row] + " - " + fag[indexPath.row]
+        cell.content.text = constants.fagKode[indexPath.row] + " - " + constants.fag[indexPath.row]
         cell.content.tag = indexPath.row
         if(!ChooseSubject.mineFag.contains(cell.content.text!)){
             cell.svitsj.setOn(false, animated: false)
@@ -97,15 +92,4 @@ class ChooseSubject: UIViewController, UITableViewDataSource, UITableViewDelegat
         }
         return cell
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
