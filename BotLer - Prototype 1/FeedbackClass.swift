@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FeedbackClass: UIViewController,UITextFieldDelegate {
+class FeedbackClass: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate, UITextViewDelegate{
 
     @IBOutlet weak var yesBtnL: UIButton!
     @IBOutlet weak var noBtnL: UIButton!
@@ -17,10 +17,8 @@ class FeedbackClass: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var tfBtnP: UIButton!
     @IBOutlet weak var insertFeedback: UITextField!
 
-    @IBOutlet weak var ikkeValgtFag: UITextView!
     @IBOutlet weak var velgFagKnapp: UIButton!
     @IBOutlet weak var attend: UITextView!
-    @IBOutlet weak var errorField: UITextView!
     @IBOutlet weak var attendText: UITextView!
     @IBOutlet weak var notAttendText: UITextView!
     @IBOutlet weak var recapText: UITextView!
@@ -31,7 +29,14 @@ class FeedbackClass: UIViewController,UITextFieldDelegate {
     static var feedback:String = ""
     static var pace:String = ""
     static var valgtFag:String = ""
+    var fag:[String] = []
+    var subject = ""
+    static var subjectName = ""
+
+
     
+    @IBOutlet weak var dropDown: UIPickerView!
+    @IBOutlet weak var selectedSubject: UITextField!
     
     func textFieldShouldReturn(_ insertFeedback: UITextField) -> Bool {
         self.view.endEditing(true)
@@ -61,7 +66,7 @@ class FeedbackClass: UIViewController,UITextFieldDelegate {
         
         let url = NSURL(string: "http://folk.ntnu.no/sondrbre/receive.php")
         
-        var request = URLRequest(url: url as! URL)
+        var request = URLRequest(url: url! as URL)
         request.httpMethod = "POST"
         
         var dataString = "secretWord=44fdcv8jf3" // starting POST string with a secretWord
@@ -69,8 +74,7 @@ class FeedbackClass: UIViewController,UITextFieldDelegate {
         dataString = dataString + "&attended=\(FeedbackClass.attended)"
         dataString = dataString + "&feedback=\(FeedbackClass.feedback)"
         dataString = dataString + "&pace=\(FeedbackClass.pace)"
-        dataString = dataString + "&subject=\(SubjectFeedback.valgtFag.components(separatedBy: " ")[0])"
-    
+        dataString = dataString + "&subject=\(subject)"
         
         let dataD = dataString.data(using: .utf8) // convert to utf8 string
         
@@ -131,28 +135,35 @@ class FeedbackClass: UIViewController,UITextFieldDelegate {
         }
     }
     
-    @IBAction func velgFag(_ sender: Any) {
-        errorField.isHidden = true
-        attendText.isHidden = false
-        attend.isHidden = false
-        yesBtnL.isHidden = false
-        noBtnL.isHidden = false
-    }
     @IBAction func yesBtnLClicked(_ sender: Any) {
         noBtnL.isSelected = false
         noBtnL.backgroundColor = UIColor.white
         noBtnL.setTitleColor(UIColor.gray, for: .normal)
-        if (yesBtnL.backgroundColor == UIColor(red: 35/255, green: 132/255, blue: 247/255, alpha: 1)){
+        if(yesBtnL.isSelected == false && (tsBtnP.isSelected == true || jrBtnP.isSelected == true || tfBtnP.isSelected == true)){
+            yesBtnL.isSelected = true
+            yesBtnL.backgroundColor = UIColor(red: 35/255, green: 132/255, blue: 247/255, alpha: 1)
+            yesBtnL.setTitleColor(UIColor.white, for: .normal)
+            tsBtnP.isHidden = false
+            jrBtnP.isHidden = false
+            tfBtnP.isHidden = false
+            paceText.isHidden = false
+            notAttendText.isHidden = true
+            recapText.isHidden = false
+            insertFeedback.isHidden = false
+            submit.isHidden = false
+        }
+        
+        else if (yesBtnL.backgroundColor == UIColor(red: 35/255, green: 132/255, blue: 247/255, alpha: 1)){
             yesBtnL.isSelected = false
             yesBtnL.backgroundColor = UIColor.white
             yesBtnL.setTitleColor(UIColor.gray, for: .normal)
-            submit.isHidden = true
             tsBtnP.isHidden = true
             jrBtnP.isHidden = true
             tfBtnP.isHidden = true
             paceText.isHidden = true
             recapText.isHidden = true
             insertFeedback.isHidden = true
+            submit.isHidden = true
 
         }
         else{
@@ -266,14 +277,6 @@ class FeedbackClass: UIViewController,UITextFieldDelegate {
         
         super.viewDidLoad()
         self.insertFeedback.delegate = self;
-        if(ChooseSubject.mineFag.count < 1){
-            velgFagKnapp.isHidden = true
-            ikkeValgtFag.isHidden = false
-        }
-        else{
-            ikkeValgtFag.isHidden = true
-        }
-        errorField.isHidden = false
         tsBtnP.isHidden = true
         jrBtnP.isHidden = true
         tfBtnP.isHidden = true
@@ -286,19 +289,94 @@ class FeedbackClass: UIViewController,UITextFieldDelegate {
         submit.isHidden = true
         yesBtnL.isHidden = true
         noBtnL.isHidden = true
-        
-    
         tsBtnP.isSelected = false
         jrBtnP.isSelected = false
         tfBtnP.isSelected = false
         submit.isSelected = false
         yesBtnL.isSelected = false
         noBtnL.isSelected = false
+        fag.append("Click here to choose a subject")
+        fag += ChooseSubject.mineFag
+        self.selectedSubject.text? = fag[0]
+        self.dropDown.isHidden = true
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    public func numberOfComponents(in pickerView: UIPickerView) -> Int{
+        return 1
+        
+    }
+    
+    public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int{
+        
+        return fag.count
+        
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        
+        self.view.endEditing(true)
+        return fag[row]
+        
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        if(fag[row] != "Click here to choose a subject"){
+            self.selectedSubject.text? = fag[row]
+            subject = fag[row].components(separatedBy: " ")[0]
+            FeedbackClass.subjectName = fag[row]
+            attendText.isHidden = false
+            attend.isHidden = false
+            yesBtnL.isHidden = false
+            noBtnL.isHidden = false
+            
+        }
+        else{
+            self.selectedSubject.text? = fag[row]
+            attendText.isHidden = true
+            attend.isHidden = true
+            yesBtnL.isHidden = true
+            noBtnL.isHidden = true
+            
+        }
+        self.dropDown.isHidden = true
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        if textField == self.selectedSubject {
+            self.dropDown.isHidden = false
+            attend.isHidden = true
+            yesBtnL.isHidden = true
+            noBtnL.isHidden = true
+            tsBtnP.isHidden = true
+            jrBtnP.isHidden = true
+            tfBtnP.isHidden = true
+            notAttendText.isHidden = true
+            recapText.isHidden = true
+            insertFeedback.isHidden = true
+            submit.isHidden = true
+            paceText.isHidden = true
+            yesBtnL.isSelected = false
+            noBtnL.isSelected = false
+            tsBtnP.isSelected = false
+            jrBtnP.isSelected = false
+            tfBtnP.isSelected = false
+            yesBtnL.backgroundColor = UIColor.white
+            yesBtnL.setTitleColor(UIColor.gray, for: .normal)
+            noBtnL.backgroundColor = UIColor.white
+            noBtnL.setTitleColor(UIColor.gray, for: .normal)
+            tsBtnP.backgroundColor = UIColor.white
+            tsBtnP.setTitleColor(UIColor.gray, for: .normal)
+            jrBtnP.backgroundColor = UIColor.white
+            jrBtnP.setTitleColor(UIColor.gray, for: .normal)
+            tfBtnP.backgroundColor = UIColor.white
+            tfBtnP.setTitleColor(UIColor.gray, for: .normal)
+            textField.endEditing(true)
+        }
     }
 
 }

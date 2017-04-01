@@ -13,13 +13,10 @@ class pushFeedback: UIViewController {
     @IBOutlet weak var textField: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        textField.text = "Your response was sendt to the lecturer of " + SubjectFeedback.valgtFag
-
-        // Do any additional setup after loading the view.
+        textField.text = "Your response was sendt to the lecturer of " + FeedbackClass.subjectName
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 }
