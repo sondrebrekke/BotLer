@@ -20,6 +20,7 @@ class Statistics: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
     var antall = 0
     var fag:[String] = []
     
+    @IBOutlet weak var assignmentsText: UITextView!
     @IBOutlet weak var prosentText: UITextView!
     @IBOutlet weak var textBox: UITextField!
     @IBOutlet weak var dropDown: UIPickerView!
@@ -29,12 +30,28 @@ class Statistics: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
     override func viewDidLoad() {
         super.viewDidLoad()
         prosentText.isHidden = true
+        assignmentsText.isHidden = true
         nrOfSubjects.delegate  = self
         completed.delegate  = self
         fag.append("Click here to choose a subject")
         fag += ChooseSubject.mineFag
         self.textBox.text? = fag[0]
         self.dropDown.isHidden = true
+    }
+    
+    override func viewDidAppear(_ animated: Bool){
+        prosentText.isHidden = true
+        assignmentsText.isHidden = true
+        nrOfSubjects.delegate  = self
+        completed.delegate  = self
+        fag.append("Click here to choose a subject")
+        fag += ChooseSubject.mineFag
+        self.textBox.text? = fag[0]
+        self.dropDown.isHidden = true
+        nrOfSubjects.text? = ""
+        completed.text? = ""
+        prosentText.text? = ""
+        dropDown.selectRow(0, inComponent: 0, animated: true)
     }
     
     func printFag(){
@@ -69,20 +86,24 @@ class Statistics: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
         var streng:String = ""
         var streng2:String = ""
         if(ids.count != 0){
-            streng += "<font color=\"black\" size=\"5.6\"><p style='display:inline'><b>Name</b></p></font><br>"
-            streng2 += "<font color=\"black\" size=\"5.6\"><p style='display:inline'><b>Status</b></p></font><br>"
+            let prosent:Double = round(10*(Double(Comids.count))/(Double(ids.count))*100)/10
+            prosentText.text? = String(prosent) + "%"
             var ant = 0
+            streng += "<p style=\"line-height:1.7\">"
+            streng2 += "<p style=\"line-height:1.7\" align=\'right\'>"
             for index in 0...ids.count-1 {
                 if(!Comids.contains(ids[index])){
-                    streng += "<font color=\"black\" size=\"5.1\"><p style='display:inline'>\(names[index])</p></font><br>"
-                    streng2 += "<font color=\"red\" size=\"5.1\"><p style='display:inline'>Not completed</p></font><br>"
+                    streng += "<font color=\"#666666\" face=\"Arial\" size=\"4.8\">\(names[index]):</font><br>"
+                    streng2 += "<font color=\"red\" face=\"Arial\" size=\"4.8\">Not completed</font><br>"
                 }
                 else{
-                    streng += "<font color=\"black\" size=\"5.1\"><p style='display:inline'>\(Comnames[ant])</p></font><br>"
-                    streng2 += "<font color=\"green\" size=\"5.1\"><p style='display:inline'>Completed</p></font><br>"
+                    streng += "<font color=\"#666666\" face=\"Arial\" size=\"4.8\">\(Comnames[ant]):</font><br>"
+                    streng2 += "<font color=\"#00ba00\" face=\"Arial\" size=\"4.8\">Completed</font><br>"
                     ant += 1
                 }
             }
+            streng += "</p>"
+            streng2 += "</p>"
 
             let encodedData = streng2.data(using: String.Encoding.utf8)!
             let encodedData2 = streng.data(using: String.Encoding.utf8)!
@@ -96,8 +117,6 @@ class Statistics: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
             } catch _ {
                 print("Cannot create attributed String")
             }
-            let prosent:Double = round(100*(Double(Comids.count))/(Double(ids.count))*100)/100
-            prosentText.text? = "You have completed " + "\(prosent)" + "% of the assignments."
         }
         else{
             nrOfSubjects.text? = ""
@@ -137,12 +156,14 @@ class Statistics: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
         if(fag[row] != "Click here to choose a subject"){
             self.textBox.text? = fag[row]
             subject = fag[row].components(separatedBy: " ")[0]
+            assignmentsText.isHidden = false
             printFag()
         }
         else{
             self.textBox.text? = fag[row]
             nrOfSubjects.text? = ""
             completed.text? = ""
+            assignmentsText.isHidden = true
             prosentText.text? = ""
         }
         nrOfSubjects.isHidden = false
@@ -157,6 +178,7 @@ class Statistics: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
             self.dropDown.isHidden = false
             nrOfSubjects.isHidden = true
             completed.isHidden = true
+            assignmentsText.isHidden = true
             prosentText.isHidden = true
             textField.endEditing(true)
         }
