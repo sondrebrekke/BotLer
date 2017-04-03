@@ -34,7 +34,7 @@ class Statistics: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
         nrOfSubjects.delegate  = self
         completed.delegate  = self
         fag.append("Click here to choose a subject")
-        fag += ChooseSubject.mineFag
+        fag += ChooseSubject.mySubjects
         self.textBox.text? = fag[0]
         self.dropDown.isHidden = true
     }
@@ -45,7 +45,7 @@ class Statistics: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
         nrOfSubjects.delegate  = self
         completed.delegate  = self
         fag.append("Click here to choose a subject")
-        fag += ChooseSubject.mineFag
+        fag += ChooseSubject.mySubjects
         self.textBox.text? = fag[0]
         self.dropDown.isHidden = true
         nrOfSubjects.text? = ""

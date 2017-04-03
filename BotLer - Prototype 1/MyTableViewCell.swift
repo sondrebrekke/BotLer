@@ -25,12 +25,12 @@ class MyTableViewCell: UITableViewCell {
     
     @IBAction func clicked(_ sender: Any) {
         if(svitsj.isOn){
-            ChooseSubject.mineFag.append(content.text!)
+            ChooseSubject.mySubjects.append(content.text!)
         }
-        else if (ChooseSubject.mineFag.contains(content.text!)){
-            let indeks = ChooseSubject.mineFag.index(of: content.text!)
-            ChooseSubject.mineFag.remove(at: indeks!)
+        else if (ChooseSubject.mySubjects.contains(content.text!)){
+            let indeks = ChooseSubject.mySubjects.index(of: content.text!)
+            ChooseSubject.mySubjects.remove(at: indeks!)
         }
-        ChooseSubject.lagre()
+        ChooseSubject.saveForOffline()
     }
 }
