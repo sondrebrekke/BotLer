@@ -9,11 +9,8 @@
 import Foundation
 
 class constants {
-    static var firstOpen = true
-    static var fagKode = [String]()
-    static var fag = [String]()
-    
-    
-    
+    static var firstOpenDuringSession = true
+    static var allAssignmentsSubjectCodes = [String]()
+    static var allAssignmentsSubjects = [String]()
 }
 

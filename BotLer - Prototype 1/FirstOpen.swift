@@ -25,11 +25,11 @@ class FirstOpen : UIViewController, UITableViewDataSource{
         let launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
         let launchedBefore2 = UserDefaults.standard.bool(forKey: "launchedBefore2")
         if launchedBefore  {
-            ChooseSubject.mineFag = UserDefaults.standard.array(forKey: "Key") as! [String]
-            ChooseSubject.mineFagKoder = [String]()
-            if(ChooseSubject.mineFag.count>0){
-                for index in 0...ChooseSubject.mineFag.count-1{
-                    ChooseSubject.mineFagKoder.append(ChooseSubject.mineFag[index].components(separatedBy: " ")[0])
+            ChooseSubject.mySubjects = UserDefaults.standard.array(forKey: "mySubjects") as! [String]
+            ChooseSubject.mySubjectCodes = [String]()
+            if(ChooseSubject.mySubjects.count>0){
+                for index in 0...ChooseSubject.mySubjects.count-1{
+                    ChooseSubject.mySubjectCodes.append(ChooseSubject.mySubjects[index].components(separatedBy: " ")[0])
                 }
             }
         }
@@ -44,7 +44,7 @@ class FirstOpen : UIViewController, UITableViewDataSource{
                 for index in 0...arrJSON.count-1 {
                     
                     let aObject = arrJSON.objectAt(index) as! [String : AnyObject]
-                    if(ChooseSubject.mineFagKoder.contains(aObject["subject"] as! String) && !(FirstOpen.completedAssignments.contains(aObject["id"] as! String))){
+                    if(ChooseSubject.mySubjectCodes.contains(aObject["subject"] as! String) && !(FirstOpen.completedAssignments.contains(aObject["id"] as! String))){
                         ids.append(aObject["id"] as! String)
                         names.append(aObject["name"] as! String)
                         subjects.append(aObject["subject"] as! String)
@@ -59,7 +59,7 @@ class FirstOpen : UIViewController, UITableViewDataSource{
         catch {
             
         }
-        if (ChooseSubject.mineFag.count == 0){
+        if (ChooseSubject.mySubjects.count == 0){
             tabell.isHidden = true
         }
     }
