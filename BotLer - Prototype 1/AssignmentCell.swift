@@ -10,7 +10,7 @@ import UIKit
 
 class AssignmentCell: UITableViewCell {
     
-    
+    //Defines the textviews for the custom cell
     @IBOutlet weak var Name: UITextView!
     @IBOutlet weak var Desc: UITextView!
     @IBOutlet weak var SubjectCode: UITextView!

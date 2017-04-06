@@ -10,8 +10,7 @@ import UIKit
 
 class Statistics: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate, UITextViewDelegate {
 
-    @IBOutlet weak var selectedSubject: UITextView!
-    
+    //Defining variables for later use
     var ids: [String] = []
     var names: [String] = []
     var Comids: [String] = []
@@ -20,6 +19,8 @@ class Statistics: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
     var antall = 0
     var fag:[String] = []
     
+    //Links to buttons and textviews.
+    @IBOutlet weak var selectedSubject: UITextView!
     @IBOutlet weak var assignmentsText: UITextView!
     @IBOutlet weak var prosentText: UITextView!
     @IBOutlet weak var textBox: UITextField!
@@ -27,6 +28,7 @@ class Statistics: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
     @IBOutlet weak var nrOfSubjects: UITextView!
     @IBOutlet weak var completed: UITextView!
     
+    //This function runs when the selected view is opened. It hides the completion-text until a subject is selected.
     override func viewDidLoad() {
         super.viewDidLoad()
         prosentText.isHidden = true
@@ -39,6 +41,7 @@ class Statistics: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
         self.dropDown.isHidden = true
     }
     
+    //runs every time a user access the 'statistics'-page, not neccesary when the view is loaded.
     override func viewDidAppear(_ animated: Bool){
         prosentText.isHidden = true
         assignmentsText.isHidden = true
@@ -54,20 +57,23 @@ class Statistics: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
         dropDown.selectRow(0, inComponent: 0, animated: true)
     }
     
+    //Gets the subjects and count number of completed assignments.
     func printFag(){
         ids = []
         names = []
         Comids = []
         Comnames = []
         antall = 0
+        
+        //This is the url where the data is collected from
         let url=URL(string:"http://folk.ntnu.no/sondrbre/index.php")
         do {
-            let allContactsData = try Data(contentsOf: url!)
-            let allContacts = try JSONSerialization.jsonObject(with: allContactsData, options: JSONSerialization.ReadingOptions.allowFragments) as! [String : AnyObject]
-            if let arrJSON = allContacts["data"]{
+            let allAssignmentsData = try Data(contentsOf: url!)
+            let allAssignments = try JSONSerialization.jsonObject(with: allAssignmentsData, options: JSONSerialization.ReadingOptions.allowFragments) as! [String : AnyObject]
+            if let arrJSON = allAssignments["data"]{
                 for index in 0...arrJSON.count-1 {
-                    
                     let aObject = arrJSON.objectAt(index) as! [String : AnyObject]
+                    //If the subject is the selected subject, it will add the assignments and count number of completed.
                     if(aObject["subject"] as! String == subject){
                         ids.append(aObject["id"] as! String)
                         if(FirstOpen.completedAssignments.contains(aObject["id"] as! String)){
@@ -86,9 +92,11 @@ class Statistics: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
         var streng:String = ""
         var streng2:String = ""
         if(ids.count != 0){
+            //Calculates the completage percentage
             let prosent:Double = round(10*(Double(Comids.count))/(Double(ids.count))*100)/10
             prosentText.text? = String(prosent) + "%"
             var ant = 0
+            //Uses HTML coding to differ text color between completed and not completed.
             streng += "<p style=\"line-height:1.7\">"
             streng2 += "<p style=\"line-height:1.7\" align=\'right\'>"
             for index in 0...ids.count-1 {
@@ -125,7 +133,7 @@ class Statistics: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
         }
     }
     
-    
+    //Secures that you cannot scroll outside the possible subjects
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if scrollView == nrOfSubjects{
             completed.contentOffset = nrOfSubjects.contentOffset
@@ -152,6 +160,7 @@ class Statistics: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
         
     }
     
+    //This function runs when you select a row.
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if(fag[row] != "Click here to choose a subject"){
             self.textBox.text? = fag[row]
@@ -173,6 +182,7 @@ class Statistics: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
         
     }
     
+    //Shows the dropdown when textfield is pushed.
     func textFieldDidBeginEditing(_ textField: UITextField) {
         if textField == self.textBox {
             self.dropDown.isHidden = false
