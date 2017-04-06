@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		7C35F95B1E8015A100A4B5EE /* FeedbackClassUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C35F95A1E8015A100A4B5EE /* FeedbackClassUITest.swift */; };
 		D8101D5D1E938566004E9657 /* AssignmentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8101D5C1E938566004E9657 /* AssignmentCell.swift */; };
-		D8244DCE1E6FF62200BD28C0 /* pushFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8244DCD1E6FF62200BD28C0 /* pushFeedback.swift */; };
 		D82D32281E59F90300542F89 /* ChooseSubject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82D32271E59F90300542F89 /* ChooseSubject.swift */; };
 		D82D322B1E59FC6B00542F89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D82D32291E59FC6B00542F89 /* Main.storyboard */; };
 		D830B1591E5DD2B9004D397A /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D830B1581E5DD2B9004D397A /* MyTableViewCell.swift */; };
@@ -27,9 +26,10 @@
 		D8A545AA1E47A3FA004D1239 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8A545A81E47A3FA004D1239 /* LaunchScreen.storyboard */; };
 		D8A545B51E47A3FA004D1239 /* BotLer___Prototype_1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A545B41E47A3FA004D1239 /* BotLer___Prototype_1Tests.swift */; };
 		D8A545C01E47A3FA004D1239 /* BotLer___Prototype_1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A545BF1E47A3FA004D1239 /* BotLer___Prototype_1UITests.swift */; };
+		D8BAB6101E94CA20005B3F5C /* Pods_BotLer___Prototype_1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10D6FB2ED99D09B1581B3B56 /* Pods_BotLer___Prototype_1.framework */; };
+		D8BAB6111E94CA20005B3F5C /* Pods_BotLer___Prototype_1.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 10D6FB2ED99D09B1581B3B56 /* Pods_BotLer___Prototype_1.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D8FC00821E8A9A6F00E2A95D /* Statistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FC00811E8A9A6F00E2A95D /* Statistics.swift */; };
 		D8FE90D31E8C5D8A001E06CC /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FE90D21E8C5D8A001E06CC /* constants.swift */; };
-		F868E0089A076F9F027A3F0F /* Pods_BotLer___Prototype_1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10D6FB2ED99D09B1581B3B56 /* Pods_BotLer___Prototype_1.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,13 +49,26 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		D8BAB6121E94CA20005B3F5C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D8BAB6111E94CA20005B3F5C /* Pods_BotLer___Prototype_1.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		0C22CE5B46FA1562E1EA089B /* Pods-BotLer - Prototype 1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BotLer - Prototype 1.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BotLer - Prototype 1/Pods-BotLer - Prototype 1.debug.xcconfig"; sourceTree = "<group>"; };
 		10D6FB2ED99D09B1581B3B56 /* Pods_BotLer___Prototype_1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_BotLer___Prototype_1.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A2B9EA08E8FFEC4DED7017D /* Pods-BotLer - Prototype 1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BotLer - Prototype 1.release.xcconfig"; path = "Pods/Target Support Files/Pods-BotLer - Prototype 1/Pods-BotLer - Prototype 1.release.xcconfig"; sourceTree = "<group>"; };
 		7C35F95A1E8015A100A4B5EE /* FeedbackClassUITest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackClassUITest.swift; sourceTree = "<group>"; };
 		D8101D5C1E938566004E9657 /* AssignmentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentCell.swift; sourceTree = "<group>"; };
-		D8244DCD1E6FF62200BD28C0 /* pushFeedback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pushFeedback.swift; sourceTree = "<group>"; };
 		D82D32271E59F90300542F89 /* ChooseSubject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseSubject.swift; sourceTree = "<group>"; };
 		D82D322A1E59FC6B00542F89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D830B1581E5DD2B9004D397A /* MyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
@@ -88,7 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F868E0089A076F9F027A3F0F /* Pods_BotLer___Prototype_1.framework in Frameworks */,
+				D8BAB6101E94CA20005B3F5C /* Pods_BotLer___Prototype_1.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,7 +180,6 @@
 				D875317D1E48A97F00580FE2 /* FeedbackClass.swift */,
 				D830B1581E5DD2B9004D397A /* MyTableViewCell.swift */,
 				D87F8B431E671158006E213E /* FirstOpen.swift */,
-				D8244DCD1E6FF62200BD28C0 /* pushFeedback.swift */,
 				D8FC00811E8A9A6F00E2A95D /* Statistics.swift */,
 				D8101D5C1E938566004E9657 /* AssignmentCell.swift */,
 			);
@@ -206,6 +218,7 @@
 				D8A5459A1E47A3FA004D1239 /* Resources */,
 				F79979603B6AFFB725D02D87 /* [CP] Embed Pods Frameworks */,
 				AD3B05852C5E6E3E8D2AEF80 /* [CP] Copy Pods Resources */,
+				D8BAB6121E94CA20005B3F5C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -391,7 +404,6 @@
 				D87F8B441E671158006E213E /* FirstOpen.swift in Sources */,
 				D8FC00821E8A9A6F00E2A95D /* Statistics.swift in Sources */,
 				D8FE90D31E8C5D8A001E06CC /* constants.swift in Sources */,
-				D8244DCE1E6FF62200BD28C0 /* pushFeedback.swift in Sources */,
 				D82D32281E59F90300542F89 /* ChooseSubject.swift in Sources */,
 				D8101D5D1E938566004E9657 /* AssignmentCell.swift in Sources */,
 				D830B1591E5DD2B9004D397A /* MyTableViewCell.swift in Sources */,

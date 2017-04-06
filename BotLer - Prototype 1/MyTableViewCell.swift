@@ -11,6 +11,9 @@ import UIKit
 class MyTableViewCell: UITableViewCell {
     
 
+    //This class defines how the cells on the 'select subject'-table are designed and implementet.
+    
+    //Defines the switch-button and the text-field for the subjectname.
     @IBOutlet weak var svitsj: UISwitch!
     @IBOutlet weak var content: UITextView!
     override func awakeFromNib() {
@@ -18,11 +21,12 @@ class MyTableViewCell: UITableViewCell {
         // Initialization code
     }
 
+    // Configure the view for the selected state
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        // Configure the view for the selected state
     }
     
+    //Runs when the switch is clicked, and set's it either to on or off.
     @IBAction func clicked(_ sender: Any) {
         if(svitsj.isOn){
             ChooseSubject.mySubjects.append(content.text!)

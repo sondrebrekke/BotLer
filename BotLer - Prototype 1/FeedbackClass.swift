@@ -339,6 +339,7 @@ class FeedbackClass: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
         return 1
     }
     
+    //Returns the number of subjects available to pick.
     public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int{
         
         return subjects.count
@@ -352,6 +353,7 @@ class FeedbackClass: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
         
     }
     
+    //This function is ran when the user selects a subject from the roll-down menu.
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if(subjects[row] != "Click here to choose a subject"){
             self.selectedSubject.text? = subjects[row]
@@ -374,6 +376,7 @@ class FeedbackClass: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
         self.dropDown.isHidden = true
     }
     
+    //The function is ran when the user clicks the 'choose subject'-button.
     func textFieldDidBeginEditing(_ textField: UITextField) {
         if textField == self.selectedSubject {
             self.dropDown.isHidden = false
