@@ -361,13 +361,13 @@
                                 </connections>
                             </pickerView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kKC-4W-Adt">
-                                <rect key="frame" x="37" y="196" width="197" height="481"/>
+                                <rect key="frame" x="37" y="196" width="220" height="481"/>
                                 <color key="backgroundColor" red="0.93715304136276245" green="0.93731355667114258" blue="0.93714290857315063" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="right" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WTp-5s-pl6">
-                                <rect key="frame" x="233" y="196" width="145" height="481"/>
+                                <rect key="frame" x="247" y="196" width="131" height="481"/>
                                 <color key="backgroundColor" red="0.9371530414" green="0.93731355670000005" blue="0.93714290860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -380,7 +380,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Assignments:" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XgG-lI-jPV">
-                                <rect key="frame" x="8" y="152" width="274" height="51"/>
+                                <rect key="frame" x="8" y="152" width="237" height="51"/>
                                 <color key="backgroundColor" red="0.93715304136276245" green="0.93731355667114258" blue="0.93714290857315063" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="textColor" red="0.0" green="0.092778394670050779" blue="0.014608003032605222" alpha="0.80300192636986301" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="23"/>
@@ -410,20 +410,20 @@
                             <constraint firstItem="opE-Ef-EgS" firstAttribute="centerY" secondItem="uRy-yV-iqg" secondAttribute="centerY" multiplier="0.33" id="FYi-TQ-rhd"/>
                             <constraint firstItem="RH0-nS-sGz" firstAttribute="centerY" secondItem="uRy-yV-iqg" secondAttribute="centerY" multiplier="0.13" priority="750" constant="0.65999999999999659" id="HtF-E0-ZUR"/>
                             <constraint firstItem="XgG-lI-jPV" firstAttribute="centerY" secondItem="uRy-yV-iqg" secondAttribute="centerY" multiplier="0.474" constant="3.0680000000000121" id="MO8-ZV-12D"/>
-                            <constraint firstItem="kKC-4W-Adt" firstAttribute="width" secondItem="uRy-yV-iqg" secondAttribute="width" multiplier="0.54" constant="-26.560000000000002" id="NVK-KP-LBC"/>
-                            <constraint firstItem="XgG-lI-jPV" firstAttribute="centerX" secondItem="uRy-yV-iqg" secondAttribute="centerX" multiplier="0.7" id="Nb0-6Y-O1x"/>
+                            <constraint firstItem="kKC-4W-Adt" firstAttribute="width" secondItem="uRy-yV-iqg" secondAttribute="width" multiplier="0.54" constant="-3.5600000000000023" id="NVK-KP-LBC"/>
+                            <constraint firstItem="XgG-lI-jPV" firstAttribute="centerX" secondItem="uRy-yV-iqg" secondAttribute="centerX" multiplier="0.7" constant="-18.399999999999977" id="Nb0-6Y-O1x"/>
                             <constraint firstItem="opE-Ef-EgS" firstAttribute="height" secondItem="uRy-yV-iqg" secondAttribute="height" multiplier="0.074" id="P72-iO-Utd"/>
                             <constraint firstItem="XgG-lI-jPV" firstAttribute="height" secondItem="uRy-yV-iqg" secondAttribute="height" multiplier="0.042" constant="20.087999999999997" id="Pub-On-ovW"/>
-                            <constraint firstItem="XgG-lI-jPV" firstAttribute="width" secondItem="uRy-yV-iqg" secondAttribute="width" multiplier="0.66" id="QSd-k5-Ko9"/>
+                            <constraint firstItem="XgG-lI-jPV" firstAttribute="width" secondItem="uRy-yV-iqg" secondAttribute="width" multiplier="0.66" constant="-36.240000000000009" id="QSd-k5-Ko9"/>
                             <constraint firstItem="WTp-5s-pl6" firstAttribute="centerY" secondItem="uRy-yV-iqg" secondAttribute="centerY" multiplier="1.175" constant="4.0999999999999659" id="Vwy-6U-Zvh"/>
                             <constraint firstItem="6T1-tF-Jfe" firstAttribute="width" secondItem="uRy-yV-iqg" secondAttribute="width" multiplier="0.3" id="WSZ-Sf-mwc"/>
                             <constraint firstItem="p2b-X2-rBT" firstAttribute="width" secondItem="uRy-yV-iqg" secondAttribute="width" id="YT3-QV-4Z9"/>
                             <constraint firstItem="6T1-tF-Jfe" firstAttribute="centerX" secondItem="uRy-yV-iqg" secondAttribute="centerX" multiplier="1.61" id="YxR-eq-Ead"/>
                             <constraint firstItem="RH0-nS-sGz" firstAttribute="centerX" secondItem="uRy-yV-iqg" secondAttribute="centerX" id="ZSj-RP-zEm"/>
-                            <constraint firstItem="WTp-5s-pl6" firstAttribute="centerX" secondItem="uRy-yV-iqg" secondAttribute="centerX" multiplier="1.535" constant="-12.245000000000005" id="bNX-69-eGx"/>
-                            <constraint firstItem="WTp-5s-pl6" firstAttribute="width" secondItem="uRy-yV-iqg" secondAttribute="width" multiplier="0.29" constant="24.940000000000012" id="c0g-MD-ZLJ"/>
+                            <constraint firstItem="WTp-5s-pl6" firstAttribute="centerX" secondItem="uRy-yV-iqg" secondAttribute="centerX" multiplier="1.535" constant="-5.2450000000000045" id="bNX-69-eGx"/>
+                            <constraint firstItem="WTp-5s-pl6" firstAttribute="width" secondItem="uRy-yV-iqg" secondAttribute="width" multiplier="0.29" constant="10.940000000000012" id="c0g-MD-ZLJ"/>
                             <constraint firstItem="p2b-X2-rBT" firstAttribute="height" secondItem="uRy-yV-iqg" secondAttribute="height" multiplier="0.38" id="c5C-37-vSg"/>
-                            <constraint firstItem="kKC-4W-Adt" firstAttribute="centerX" secondItem="uRy-yV-iqg" secondAttribute="centerX" multiplier="0.72" constant="-13.539999999999992" id="dT8-ZV-ajg"/>
+                            <constraint firstItem="kKC-4W-Adt" firstAttribute="centerX" secondItem="uRy-yV-iqg" secondAttribute="centerX" multiplier="0.72" constant="-2.039999999999992" id="dT8-ZV-ajg"/>
                             <constraint firstItem="6T1-tF-Jfe" firstAttribute="height" secondItem="uRy-yV-iqg" secondAttribute="height" multiplier="0.043" constant="19.352000000000004" id="ft0-kS-WP5"/>
                             <constraint firstItem="RH0-nS-sGz" firstAttribute="height" secondItem="uRy-yV-iqg" secondAttribute="height" multiplier="0.13" priority="750" constant="1.3199999999999932" id="gng-dj-dRr"/>
                             <constraint firstItem="p2b-X2-rBT" firstAttribute="centerY" secondItem="uRy-yV-iqg" secondAttribute="centerY" multiplier="0.63" id="kgv-5b-uEJ"/>
