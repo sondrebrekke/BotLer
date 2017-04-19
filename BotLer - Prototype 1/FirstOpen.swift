@@ -28,6 +28,8 @@ class FirstOpen : UIViewController, UITableViewDataSource{
         super.viewDidLoad()
         let launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
         let launchedBefore2 = UserDefaults.standard.bool(forKey: "launchedBefore2")
+        let displayHelp = UserDefaults.standard.bool(forKey: "displayHelp")
+        
         
         //If the app has been launched before, the user's subjects will be loaded from the info stored at the iOS device.
         if launchedBefore  {
@@ -38,6 +40,16 @@ class FirstOpen : UIViewController, UITableViewDataSource{
                     ChooseSubject.mySubjectCodes.append(ChooseSubject.mySubjects[index].components(separatedBy: " ")[0])
                 }
             }
+        }
+        //Otherwise it should display a small tutorial.
+        if !displayHelp {
+            DispatchQueue.main.async
+                {
+                    let tutorial = UIAlertController(title: "Welcome to BotLer!", message: "Thank you for downloading BotLer. Please press the '?'-button on the top left to learn how you use the app.", preferredStyle: .alert)
+                    tutorial.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                    self.present(tutorial, animated: true, completion: nil)
+            }
+            UserDefaults.standard.set(true, forKey: "displayHelp")
         }
         //If the user has completed an assignment, the completed assignment are loaded.
         if launchedBefore2{
