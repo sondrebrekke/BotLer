@@ -56,14 +56,15 @@ class FeedbackClass: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
         //The feedbacktext the user has written is inserted in to a variable
         FeedbackClass.feedback = insertFeedback.text!
         
-        //Checks the pace the user has selected.
-        if (tsBtnP.backgroundColor == UIColor(red: 35/255, green: 132/255, blue: 247/255, alpha: 1)){
+        //Checks the pace the user has selected. If the user has not attended a lecture, he/she won't be able to comment on 
+        //the pace.
+        if (tsBtnP.backgroundColor == UIColor(red: 35/255, green: 132/255, blue: 247/255, alpha: 1) && FeedbackClass.attended == "YES"){
             FeedbackClass.pace = "TOO SLOW"
         }
-        else if (jrBtnP.backgroundColor == UIColor(red: 35/255, green: 132/255, blue: 247/255, alpha: 1)){
+        else if (jrBtnP.backgroundColor == UIColor(red: 35/255, green: 132/255, blue: 247/255, alpha: 1) && FeedbackClass.attended == "YES"){
             FeedbackClass.pace = "JUST RIGHT"
         }
-        else if (tfBtnP.backgroundColor == UIColor(red: 35/255, green: 132/255, blue: 247/255, alpha: 1)){
+        else if (tfBtnP.backgroundColor == UIColor(red: 35/255, green: 132/255, blue: 247/255, alpha: 1) && FeedbackClass.attended == "YES"){
             FeedbackClass.pace = "TOO FAST"
         }
         
@@ -339,6 +340,7 @@ class FeedbackClass: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
         return 1
     }
     
+    //Returns the number of subjects available to pick.
     public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int{
         
         return subjects.count
@@ -352,6 +354,7 @@ class FeedbackClass: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
         
     }
     
+    //This function is ran when the user selects a subject from the roll-down menu.
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if(subjects[row] != "Click here to choose a subject"){
             self.selectedSubject.text? = subjects[row]
@@ -374,6 +377,7 @@ class FeedbackClass: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
         self.dropDown.isHidden = true
     }
     
+    //The function is ran when the user clicks the 'choose subject'-button.
     func textFieldDidBeginEditing(_ textField: UITextField) {
         if textField == self.selectedSubject {
             self.dropDown.isHidden = false
