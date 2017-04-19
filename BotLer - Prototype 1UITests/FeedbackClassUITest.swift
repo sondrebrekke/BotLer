@@ -35,9 +35,7 @@ class FeedbackClassUITest: XCTestCase {
         //Denne testen sjekker at alt fungerer som det skal når student skal gi tilbakemelding etter å ha deltatt i forelesning.
         
         let app = XCUIApplication()
-        app.tabBars.buttons["Feedback"].tap()
-        app.buttons["Choose subject"].tap()
-        app.tables.staticTexts["TDT4140 - Software Engineering"].tap()
+        
         
         
         //Lager de aktuelle knappene på Feedback siden
@@ -46,6 +44,13 @@ class FeedbackClassUITest: XCTestCase {
         let justRightButton = app.buttons["Just right"]
         let tooSlowButton = app.buttons["Too slow"]
         let tooFastButton = app.buttons["Too fast"]
+        
+        
+        app.tabBars.buttons["Feedback"].tap()
+        app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .textField).element.tap()
+        app.pickerWheels["Click here to choose a subject"].swipeUp()
+        
+        
         
         //Tester at justRightButton, tooFastButton og tooSlowButton ikke finnes før vi trykker på yesButton
         XCTAssertEqual(justRightButton.exists, false)
@@ -76,7 +81,6 @@ class FeedbackClassUITest: XCTestCase {
         XCTAssertEqual(tooFastButton.isSelected, false)
         
         app.buttons["SUBMIT"].tap()
-        app.buttons["Back"].tap()
         
         
     }
@@ -96,10 +100,15 @@ class FeedbackClassUITest: XCTestCase {
         let tooFastButton = app.buttons["Too fast"]
         
         
-        app.tabBars.buttons["Feedback"].tap()
-        app.buttons["Choose subject"].tap()
-        XCUIApplication().tables.staticTexts["TDT4120 - Algorithms and Data Structures"].tap()
         
+        
+    
+        app.tabBars.buttons["Feedback"].tap()
+        app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .textField).element.tap()
+        app.pickerWheels["Click here to choose a subject"].swipeUp()
+        
+        
+    
     
         //Tester at yesButton og noButton ikke er valgt før vi klikker på noButton
         XCTAssertEqual(yesButton.isSelected, false)
@@ -125,7 +134,7 @@ class FeedbackClassUITest: XCTestCase {
         
         
         app.buttons["SUBMIT"].tap()
-        app.buttons["Back"].tap()
+     
     
         
     }
