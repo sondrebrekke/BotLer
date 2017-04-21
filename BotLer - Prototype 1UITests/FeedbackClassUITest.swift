@@ -12,33 +12,28 @@ class FeedbackClassUITest: XCTestCase {
         
     override func setUp() {
         super.setUp()
-        
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-        
-        // In UI tests it is usually best to stop immediately when a failure occurs.
+
         continueAfterFailure = false
-        // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
+       
         XCUIApplication().launch()
 
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+      
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
         super.tearDown()
     }
     
     func testAttendedLecture() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        
-        //Denne testen sjekker at alt fungerer som det skal når student skal gi tilbakemelding etter å ha deltatt i forelesning.
-        
+      
+        //This UI Test checks that everything works correctly when a student has been in a lecture and gives feedback to the lecturer.
+   
         let app = XCUIApplication()
         
         
         
-        //Lager de aktuelle knappene på Feedback siden
+        //Initializes the relevant buttons
         let yesButton = app.buttons["Yes"]
         let noButton = app.buttons["No"]
         let justRightButton = app.buttons["Just right"]
@@ -52,12 +47,12 @@ class FeedbackClassUITest: XCTestCase {
         
         
         
-        //Tester at justRightButton, tooFastButton og tooSlowButton ikke finnes før vi trykker på yesButton
+        //Tests that justRightButton, tooFastButton and tooSlowButton don't exist before yesButton is clicked.
         XCTAssertEqual(justRightButton.exists, false)
         XCTAssertEqual(tooFastButton.exists, false)
         XCTAssertEqual(tooSlowButton.exists, false)
         
-        //Tester om yesButton er valgt etter klikk, og at noButton ikke er valgt når yesButton er valgt
+        //Tests that yesButton is selected after clicked, and that noButton is not selected when yesButton is selected.
         XCTAssertEqual(yesButton.isSelected, false)
         XCTAssertEqual(noButton.isSelected, false)
         yesButton.tap()
@@ -65,13 +60,13 @@ class FeedbackClassUITest: XCTestCase {
         XCTAssertEqual(noButton.isSelected, false)
         
         
-        //Tester at justRightButton, tooFastButton og tooSlowButton finnes etter vi trykket på yesButton
+        //Tests that justRightButton, tooFastButton and tooSlowButton exist after we yesButton is selected.
         XCTAssertEqual(justRightButton.exists, true)
         XCTAssertEqual(tooFastButton.exists, true)
         XCTAssertEqual(tooSlowButton.exists, true)
         
         
-        //Tester om justRightButton er valgt etter klikk, og at tooSlowButton og tooFastButton ikke er valgt når justRightButton er valgt
+        //Tests wheter justRightButton is selected after clicked, and that tooSlowButton and tooFastButton is not selected when justRightButton is selected.
         XCTAssertEqual(justRightButton.isSelected, false)
         XCTAssertEqual(tooSlowButton.isSelected, false)
         XCTAssertEqual(tooFastButton.isSelected, false)
@@ -87,12 +82,12 @@ class FeedbackClassUITest: XCTestCase {
     
     func testDidNotAttendLecture() {
         
-        //Denne testen sjekker at alt fungerer som det skal når student skal gi tilbakemelding etter å ikke ha deltatt i forelesning.
         
+        //This UI Test checks that everything works correctly when a student has not been in a lecture and gives feedback to the lecturer.
         
         let app = XCUIApplication()
         
-        //Lager de aktuelle knappene på Feedback siden
+        //Initializes the relevant buttons on the Feedback page
         let yesButton = app.buttons["Yes"]
         let noButton = app.buttons["No"]
         let justRightButton = app.buttons["Just right"]
@@ -100,9 +95,7 @@ class FeedbackClassUITest: XCTestCase {
         let tooFastButton = app.buttons["Too fast"]
         
         
-        
-        
-    
+        //Selects a subject
         app.tabBars.buttons["Feedback"].tap()
         app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .textField).element.tap()
         app.pickerWheels["Click here to choose a subject"].swipeUp()
@@ -110,27 +103,28 @@ class FeedbackClassUITest: XCTestCase {
         
     
     
-        //Tester at yesButton og noButton ikke er valgt før vi klikker på noButton
+        //Testes that yesButton and noButton is not selected before noButton is clicked
         XCTAssertEqual(yesButton.isSelected, false)
         XCTAssertEqual(noButton.isSelected, false)
         
         
-        //Tester at justRightButton, tooFastButton og tooSlowButton ikke finnes før vi trykker på noButton
+        //Tests that justRightButton, tooFastButton and tooSlowButton don't exist before noButton is selected.
         XCTAssertEqual(justRightButton.exists, false)
         XCTAssertEqual(tooFastButton.exists, false)
         XCTAssertEqual(tooSlowButton.exists, false)
         
         noButton.tap()
         
+        //Tester that noButton is selected after clicked, and that yesButton is not selected when noButton is selected.
+        XCTAssertEqual(yesButton.isSelected, false)
+        XCTAssertEqual(noButton.isSelected, true)
         
-        //Tester at justRightButton, tooFastButton og tooSlowButton fortsatt ikke finnes etter vi trykket på noButton
+        
+        //Tests that justRightButton, tooFastButton and tooSlowButton still don't exist after noButton is selected.
         XCTAssertEqual(justRightButton.exists, false)
         XCTAssertEqual(tooFastButton.exists, false)
         XCTAssertEqual(tooSlowButton.exists, false)
         
-        //Tester at noButton er valgt etter klikk, og at yesButton ikke er valgt når noButton er valgt
-        XCTAssertEqual(yesButton.isSelected, false)
-        XCTAssertEqual(noButton.isSelected, true)
         
         
         app.buttons["SUBMIT"].tap()

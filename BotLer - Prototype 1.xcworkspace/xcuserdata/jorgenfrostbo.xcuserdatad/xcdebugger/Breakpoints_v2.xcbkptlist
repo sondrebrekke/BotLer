@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BotLer - Prototype 1UITests/FeedbackClassUITest.swift"
-            timestampString = "511711671.943579"
+            timestampString = "514450439.563979"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
             landmarkName = "testAttendedLecture()"
             landmarkType = "7">
          </BreakpointContent>

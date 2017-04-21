@@ -11,7 +11,7 @@ import UIKit
 class MyTableViewCell: UITableViewCell {
     
 
-    //This class defines how the cells on the 'select subject'-table are designed and implementet.
+    //This class defines how the cells on the 'select subject'-table are designed and implemented.
     
     //Defines the switch-button and the text-field for the subjectname.
     @IBOutlet weak var svitsj: UISwitch!
