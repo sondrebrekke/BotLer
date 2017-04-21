@@ -20,15 +20,19 @@ class ChooseSubject: UIViewController, UITableViewDataSource, UITableViewDelegat
     //This method is called when the reset assignments-button is pushed. It displays an alert where the user has to confirm
     //they really want to reset the completed assignments, or cancel.
     @IBAction func resetCompletedAssigments(_ sender: Any) {
-        let alert = UIAlertController(title: "Warning", message: "Are you sure you want to reset your completed assignments? All data will be lost", preferredStyle: UIAlertControllerStyle.alert)
+        let alert = UIAlertController(title: "Warning", message: "Are you sure you want to reset the app? All data will be lost, including your selected courses and completed assignments.", preferredStyle: UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction(title:"Cancel", style: UIAlertActionStyle.cancel, handler:{(action) in alert.dismiss(animated:true, completion: nil)
         }))
         alert.addAction(UIAlertAction(title:"Reset", style: UIAlertActionStyle.destructive, handler:{(action) in alert.dismiss(animated:true, completion: nil)
             //The completed assignments-array is set to an empty one.
             FirstOpen.completedAssignments = [String]()
+            ChooseSubject.mySubjects = [String]()
+            ChooseSubject.mySubjectCodes = [String]()
             //Saves the array
             FirstOpen.completeAssignment()
-            self.resetButton.isHidden = true
+            ChooseSubject.saveForOffline()
+            self.refreshAssignments()
+            self.subjectTable.reloadData()
         }))
         self.present(alert, animated:true, completion: nil)
     }
@@ -38,9 +42,6 @@ class ChooseSubject: UIViewController, UITableViewDataSource, UITableViewDelegat
     //will be updated from the database.
     override func viewDidLoad() {
         super.viewDidLoad()
-        if(FirstOpen.completedAssignments.count==0){
-            resetButton.isHidden = true
-        }
         if(constants.firstOpenDuringSession){
             //Refreshes the assignments from the DB if this is the first time opening the view during this session.
             refreshAssignments()
@@ -49,6 +50,8 @@ class ChooseSubject: UIViewController, UITableViewDataSource, UITableViewDelegat
     
     //Get the assignments from the DB.
     func refreshAssignments(){
+        constants.allAssignmentsSubjectCodes = [String]()
+        constants.allAssignmentsSubjects = [String]()
         constants.firstOpenDuringSession = false
         let url=URL(string:"http://folk.ntnu.no/sondrbre/getSubjects.php")
         do {
