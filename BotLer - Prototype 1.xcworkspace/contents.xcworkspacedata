@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:MainLogo.png">
+   </FileRef>
+   <FileRef
       location = "group:BotLer - Prototype 1.xcodeproj">
    </FileRef>
    <FileRef

@@ -66,7 +66,7 @@ class Statistics: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
         antall = 0
         
         //This is the url where the data is collected from
-        let url=URL(string:"http://folk.ntnu.no/sondrbre/index.php")
+        let url=URL(string:"http://folk.ntnu.no/sondrbre/getAssignments.php")
         do {
             let allAssignmentsData = try Data(contentsOf: url!)
             let allAssignments = try JSONSerialization.jsonObject(with: allAssignmentsData, options: JSONSerialization.ReadingOptions.allowFragments) as! [String : AnyObject]

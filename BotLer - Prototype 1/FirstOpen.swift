@@ -57,7 +57,7 @@ class FirstOpen : UIViewController, UITableViewDataSource{
         }
         
         //Defines the url of the page that contains all assignments
-        let url=URL(string:"http://folk.ntnu.no/sondrbre/index.php")
+        let url=URL(string:"http://folk.ntnu.no/sondrbre/getAssignments.php")
         do {
             let allAssignmentsData = try Data(contentsOf: url!)
             let allAssignments = try JSONSerialization.jsonObject(with: allAssignmentsData, options: JSONSerialization.ReadingOptions.allowFragments) as! [String : AnyObject]
