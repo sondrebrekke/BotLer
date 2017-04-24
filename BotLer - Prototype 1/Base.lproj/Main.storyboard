@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BR0-Rr-axU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BR0-Rr-axU">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -185,7 +185,7 @@
                                     <action selector="submitClicked:" destination="69G-aD-MMD" eventType="touchUpInside" id="b0L-On-9Uo"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="GNe-Hb-BYn">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MainLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="GNe-Hb-BYn">
                                 <rect key="frame" x="119.66666666666669" y="-23.333333333333329" width="175" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="175" id="KWK-XW-T0M"/>
@@ -336,7 +336,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="TEA-jb-zXY">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MainLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="TEA-jb-zXY">
                                 <rect key="frame" x="120" y="-23.333333333333329" width="175" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="7CJ-QC-Ipz"/>
@@ -471,7 +471,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="Q0U-h5-dys">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MainLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="Q0U-h5-dys">
                                 <rect key="frame" x="119.66666666666669" y="-23.333333333333329" width="175" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="175" id="5ac-GZ-sGD"/>
@@ -622,7 +622,7 @@
                                     <segue destination="36A-Ze-FF7" kind="show" id="izQ-kh-cdU"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="BWG-rj-fgC">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MainLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="BWG-rj-fgC">
                                 <rect key="frame" x="119.66666666666669" y="-23.333333333333329" width="175" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="E3K-lV-AxC"/>
@@ -807,7 +807,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="ljk-Rt-mp0">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MainLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="ljk-Rt-mp0">
                                 <rect key="frame" x="119.66666666666669" y="-23.333333333333329" width="175" height="150"/>
                                 <color key="backgroundColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -946,13 +946,13 @@
     <resources>
         <image name="FeedbackIcon-App-29x29.png" width="29" height="29"/>
         <image name="Icon-App-29x29.png" width="29" height="29"/>
-        <image name="Logo.png" width="1638" height="536"/>
+        <image name="MainLogo.png" width="1638" height="536"/>
         <image name="Settings-128.png" width="128" height="128"/>
         <image name="StatisticsIcon-App-29x29.png" width="29" height="29"/>
         <image name="question.png" width="87" height="87"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Uo3-OG-sg7"/>
         <segue reference="igu-km-Tgy"/>
+        <segue reference="Uo3-OG-sg7"/>
     </inferredMetricsTieBreakers>
 </document>
