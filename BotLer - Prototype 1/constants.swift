@@ -9,6 +9,8 @@
 import Foundation
 
 class constants {
+    
+    //Defines static constants that will be used later
     static var firstOpenDuringSession = true
     static var allAssignmentsSubjectCodes = [String]()
     static var allAssignmentsSubjects = [String]()
